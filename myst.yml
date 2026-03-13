@@ -1,15 +1,53 @@
-# See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
-  id: fc9c0e0b-b4cd-4363-8237-0ed710bfeacb
-  # title:
-  # description:
-  # keywords: []
-  # authors: []
-  # github:
-  # To autogenerate a Table of Contents, run "myst init --write-toc"
+  title: Projeto Hermathena
+  subtitle: Comunicação Multimídia do Radiotelescópio BINGO
+  authors:
+    - Luciano Barosi
+  license: CC-BY-4.0
+
 site:
   template: book-theme
-  # options:
-  #   favicon: favicon.ico
-  #   logo: site_logo.png
+
+latex:
+  engine: pdflatex
+  class: report
+  titlepage: true
+  header-includes:
+    - \usepackage{graphicx}
+    - \usepackage{fancyhdr}
+    - \pagestyle{fancy}
+    - \fancyhead[L]{Projeto Hermathena}
+    - \fancyhead[R]{Radiotelescópio BINGO}
+
+toc:
+  - file: book/index.md
+
+  - title: Fundamentos
+    children:
+      - file: book/motivacao.md
+      - file: book/contexto-bingo.md
+
+  - title: Estrutura Organizacional
+    children:
+      - file: book/organizacao/estrutura.md
+      - file: book/organizacao/nucleos.md
+
+  - title: Estratégia
+    children:
+      - file: book/estrategia/educomunicacao.md
+      - file: book/estrategia/canais.md
+
+  - title: Operação
+    children:
+      - file: book/operacao/fase1.md
+      - file: book/operacao/cronograma.md
+
+  - title: Financiamento
+    children:
+      - file: book/financiamento/orcamento.md
+      - file: book/financiamento/parceiros.md
+
+  - title: Anexos
+    children:
+      - file: book/anexos/glossario.md
