@@ -90,4 +90,5 @@ O BINGO representa:
 
 *Para mais informações técnicas, consulte a documentação científica da colaboração BINGO.*
 
-[Inserir lista de refencias aqui]
+```{bibliography} ../../ref.bib
+```

@@ -111,21 +111,15 @@ Baseada nos princípios de:
 
 ### Processo de Produção de Material
 
-```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│  1. PESQUISA │ -> │ 2. ROTEIRO  │ -> │ 3. PRODUÇÃO │ -> │ 4. REVISÃO  │
-│             │    │             │    │             │    │             │
-│ Análise de  │    │ Estruturação│    │ Criação de  │    │ Validação   │
-│ necessidades│    │ do conteúdo │    │ peças       │    │ com público │
-└─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
-                                                                │
-                                                                v
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│ 8. ATUALIZA │ <- │ 7. AVALIAÇÃO│ <- │ 6. DIFUSÃO  │ <- │ 5. PUBLICAÇÃO│
-│             │    │             │    │             │    │             │
-│ Melhorias   │    │ Métricas de │    │ Distribuição│    │ Disponibili-│
-│ contínuas   │    │ impacto     │    │ nos canais  │    │ zação formal│
-└─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
+```mermaid
+flowchart TD
+    A[1. PESQUISA<br>Análise de necessidades] --> B[2. ROTEIRO<br>Estruturação do conteúdo]
+    B --> C[3. PRODUÇÃO<br>Criação de peças]
+    C --> D[4. REVISÃO<br>Validação com público]
+    D --> E[5. PUBLICAÇÃO<br>Disponibilização formal]
+    E --> F[6. DIFUSÃO<br>Distribuição nos canais]
+    F --> G[7. AVALIAÇÃO<br>Métricas de impacto]
+    G --> H[8. ATUALIZA<br>Melhorias contínuas]
 ```
 
 ## Cronograma de Ações (Ano 1)

@@ -59,7 +59,7 @@ bingotelescope.org/
 │   ├── /estudantes (Fundamental, Médio)
 │   ├── /educadores (Materiais didáticos)
 │   ├── /pesquisadores (Publicações técnicas)
-│   └── /publico-geral (Conteúdo acessível)
+│   └── /público-geral (Conteúdo acessível)
 │
 ├── /noticias
 │   ├── /tekoha (Notícias locais)

@@ -145,21 +145,12 @@ Formato: Vídeos curtos respondendo perguntas do público
 
 ### Fluxo de Produção de Conteúdo
 
-```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│ 1. PLANEJAMENTO │ -> │ 2. PRODUÇÃO     │ -> │ 3. AGENDAMENTO  │
-│                 │    │                 │    │                 │
-│ Calendário      │    │ Criação de      │    │ Programação     │
-│ editorial       │    │ peças visuais   │    │ nos canais      │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-         │                                            │
-         v                                            v
-┌─────────────────┐                         ┌─────────────────┐
-│ 4. ANÁLISE      │ <-                      │ 5. PUBLICAÇÃO   │
-│                 │                         │                 │
-│ Métricas e      │                         │ Postagem e      │
-│ aprendizados    │                         │ monitoração     │
-└─────────────────┘                         └─────────────────┘
+```mermaid
+flowchart TD
+    A[1. PLANEJAMENTO<br>Calendário editorial] --> B[2. PRODUÇÃO<br>Criação de peças visuais]
+    B --> C[3. AGENDAMENTO<br>Programação nos canais]
+    A --> D[4. ANÁLISE<br>Métricas e aprendizados]
+    C --> E[5. PUBLICAÇÃO<br>Postagem e monitoração]
 ```
 
 ### Processo de Criação

@@ -70,15 +70,15 @@ Sistema integrado de gestão de mídia:
 ```python
 # Exemplo: Pipeline de automação
 class ContentAutomation:
-    def agendar_conteudo(self, post, data, plataformas):
+    def agendar_conteúdo(self, post, data, plataformas):
         """Agenda post em múltiplas plataformas"""
         pass
     
-    def gerar_relatorio_metricas(self, periodo):
+    def gerar_relatório_métricas(self, período):
         """Gera relatório automático de desempenho"""
         pass
     
-    def monitorar_mencoes(self):
+    def monitorar_menções(self):
         """Monitora menções ao BINGO nas redes"""
         pass
 ```
@@ -211,30 +211,31 @@ flowchart TB
 
 ### Capital (Material Permanente)
 
-| Item | Valor (R$) |
-|------|------------|
-| Servidor NAS | 20.000,00 |
-| **Subtotal Capital** | **81.400,00** |
+| Item | Quantidade | Valor Unitário (R$) | Valor Total (R$) |
+|------|------------|---------------------|------------------|
+| Servidor NAS | 1 | 20.000,00 | 20.000,00 |
+| Laptops para equipe | 5 | 5.000,00 | 25.000,00 |
+| **Subtotal Capital** | | | **45.000,00** |
 
 ### Custeio (Mensal/Anual)
 
-| Item | Mensal | Anual |
-|------|--------|-------|
-| Hospedagem cloud | R$ 150,00 | R$ 1.800,00 |
-| Serviços de IA | R$ 100,00 | R$ 1.200,00 |
-| Software e licenças | R$ 180,00 | R$ 2.160,00 |
-| Bolsa (1 bolsista) | R$ 400,00 | R$ 2.400,00* |
-| **Subtotal Custeio** | **R$ 830,00** | **R$ 7.560,00** |
+| Item | Quantidade | Mensal | Anual |
+|------|------------|--------|-------|
+| Hospedagem cloud | 1 | R$ 150,00 | R$ 1.800,00 |
+| Serviços de IA | 1 | R$ 100,00 | R$ 1.200,00 |
+| Software e licenças | 1 | R$ 180,00 | R$ 2.160,00 |
+| Bolsa PROBEX (bolsista) | 3 | R$ 1.200,00 | R$ 7.200,00* |
+| **Subtotal Custeio** | | **R$ 1.630,00** | **R$ 12.360,00** |
 
-*6 meses de bolsa
+*6 meses de bolsa para 3 bolsistas
 
 ### Total Ano 1
 
 | Categoria | Valor (R$) |
 |-----------|------------|
-| Capital | 34.000,00 |
-| Custeio | 7.560,00 |
-| **TOTAL** | **41.560,00** |
+| Capital | 45.000,00 |
+| Custeio | 12.360,00 |
+| **TOTAL** | **57.360,00** |
 
 ---
 

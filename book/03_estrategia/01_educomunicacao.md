@@ -20,26 +20,13 @@ No Projeto Hermathena, adotamos a educomunicação como eixo central porque ela 
 
 ### Três Vertentes Teóricas
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                 FUNDAÇÃO TEÓRICA                           │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│   ┌──────────────┐  ┌──────────────┐  ┌──────────────┐    │
-│   │ Educomuni-   │  │ Comunicação  │  │ Desenvolvi-  │    │
-│   │ cação        │  │ Pública da   │  │ mento        │    │
-│   │              │  │ Ciência      │  │ Regional     │    │
-│   └──────┬───────┘  └──────┬───────┘  └──────┬───────┘    │
-│          │                 │                 │             │
-│          └─────────────────┼─────────────────┘             │
-│                            │                               │
-│                            ▼                               │
-│                 ┌──────────────────────┐                   │
-│                 │  PROJETO HERMATHENA  │                   │
-│                 └──────────────────────┘                   │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
-```
+O projeto Hermathena fundamenta-se em três vertentes teóricas principais que convergem para a criação de um ecossistema integrado de comunicação científica, educação e desenvolvimento regional:
+
+1. **Educomunicação** - Abordagem que promove o diálogo horizontal entre cientistas e público, com construção conjunta de conhecimento
+2. **Comunicação Pública da Ciência** - Estratégias para tornar o conhecimento científico acessível e relevante para a sociedade
+3. **Desenvolvimento Regional** - Integração entre pesquisa científica e desenvolvimento socioeconômico da região
+
+Essas três vertentes se interconectam e sustentam o **Projeto Hermathena**, criando uma ponte entre a excelência científica do Radiotelescópio BINGO e as necessidades da comunidade paraibana.
 
 ---
 
