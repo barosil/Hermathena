@@ -1,4 +1,5 @@
-:::{mermaid}flowchart TB
+:::{mermaid}
+flowchart TB
 
 L[Laniakea<br>Stakeholders]
 

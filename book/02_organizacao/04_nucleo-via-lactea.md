@@ -1,9 +1,7 @@
 # Núcleo Via Láctea: Comunicação Institucional e Educacional
 
-```{figure} ../../assets/images/vialactea.jpg
-:name: vialactea
-:width: 100%
-```
+![](../../assets/images/vialactea.jpg)
+
 
 ## Visão Geral
 

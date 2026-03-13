@@ -3,10 +3,7 @@
 
 ## 2. Estrutura Organizacional
 
-```{figure} ../../assets/images/nucleos.png
-:name: hermathena
-:width: 100%
-```
+![](../../assets/images/nucleos.png)
 
 ### 2.1 Núcleos de Atuação
 

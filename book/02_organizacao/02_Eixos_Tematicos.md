@@ -1,9 +1,6 @@
 # Eixos Temáticos de Conteúdo
 
-```{figure} ../../assets/images/eixos.png
-:name: hermathena
-:width: 100%
-```
+![](../../assets/images/eixos.png)
 
 ## Conteúdos por Eixo
 

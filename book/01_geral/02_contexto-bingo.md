@@ -1,8 +1,6 @@
 # Contexto: O Radiotelescópio BINGO
 
-```{figure} ../assets/images/bingo_view.jpg
-:width: 50%
-```
+![](../../assets/images/bingo_view.jpg)
 
 ## O que é o BINGO?
 
@@ -81,14 +79,13 @@ O BINGO representa:
 - **Coordenação Hermathena:** Luciano Barosi
 
 É neste contexto que surge o projeto Hermathena, concebido para transformar a presença do radiotelescópio BINGO no sertão paraibano em uma oportunidade ampliada de educação científica, comunicação pública da ciência e desenvolvimento regional.
----
 
-```{figure} ../assets/images/bingo_map.jpg
-:width: 50%
-``` 
+
+![](../../assets/images/bingo_map.jpg)
 
 
 *Para mais informações técnicas, consulte a documentação científica da colaboração BINGO.*
 
-```{bibliography} ../../ref.bib
-```
+
+
+---

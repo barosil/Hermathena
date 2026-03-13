@@ -1,9 +1,6 @@
 # Núcleo Triangulum: Comunicação de Profundidade
 
-```{figure} ../../assets/images/triangulum.jpg
-:name: triangulum
-:width: 100%
-```
+![](../../assets/images/triangulum.jpg)
 
 ## Visão Geral
 

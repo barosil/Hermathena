@@ -1,9 +1,6 @@
 # Projeto Hermathena
 
-```{figure} ../assets/images/hermathena.jpg
-:name: hermathena
-:width: 50%
-```
+![hermathena](../assets/images/hermathena.jpg)
 
 ## Uma jornada de transformação humana nas asas da ciência
 

@@ -1,9 +1,6 @@
 # Núcleo Andromeda: Comunicação de Engajamento
 
-```{figure} ../../assets/images/andromeda.jpeg
-:name: andromeda
-:width: 100%
-```
+![](../../assets/images/andromeda.jpeg)
 
 ## Visão Geral
 
