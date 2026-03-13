@@ -1,5 +1,9 @@
 # Contexto: O Radiotelescópio BINGO
 
+```{figure} ../assets/images/bingo_view.jpg
+:width: 50%
+```
+
 ## O que é o BINGO?
 
 O **BINGO** (Baryon Acoustic Oscillations in Neutral Gas Observations) é um radiotelescópio de última geração projetado para realizar a primeira detecção de Oscilações Acústicas de Bárions (BAO) na faixa de radiofrequência.
@@ -79,4 +83,11 @@ O BINGO representa:
 É neste contexto que surge o projeto Hermathena, concebido para transformar a presença do radiotelescópio BINGO no sertão paraibano em uma oportunidade ampliada de educação científica, comunicação pública da ciência e desenvolvimento regional.
 ---
 
+```{figure} ../assets/images/bingo_map.jpg
+:width: 50%
+``` 
+
+
 *Para mais informações técnicas, consulte a documentação científica da colaboração BINGO.*
+
+[Inserir lista de refencias aqui]

@@ -1,9 +1,7 @@
 # Núcleo Magellan: Ferramentas TIC
 
-```{figure} ../../assets/images/magellan.jpg
-:name: hermathena
-:width: 100%
-```
+![hermathena](../../assets/images/magellan.jpg)
+
 
 ## Visão Geral
 
@@ -116,12 +114,6 @@ Criação de sistema de design consistente:
 - Análise de heatmaps
 - Otimização de conversão
 
-### 5. Equipamentos de Desenvolvimento
-
-| Equipamento | Quantidade | Custo Unitário | Total |
-|-------------|------------|----------------|-------|
-| **Monitores 27"** | 3 | R$ 2.000,00 | R$ 6.000,00 |
-| **Dispositivos teste (tablets, smartphones)** | 4 | R$ 2.000,00 | R$ 8.000,00 |
 
 ### 6. Software e Assinaturas
 
@@ -129,7 +121,6 @@ Criação de sistema de design consistente:
 |--------------|--------------|-------------|
 | **Adobe Creative Cloud** (design) | R$ 200,00 | R$ 2.400,00 |
 | **Figma Pro** (prototipagem) | R$ 50,00 | R$ 600,00 |
-| **Serviços cloud** (AWS/GCP) | R$ 1.200,00 | R$ 14.400,00 |
 
 ## Metodologia de Trabalho
 

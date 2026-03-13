@@ -80,18 +80,18 @@ Estabelecer a identidade e a presença institucional do BINGO, produzir conteúd
 
 | Instituição | Tipo de Parceria | Ações Previstas |
 |-------------|------------------|-----------------|
-| UEPB | Cooperação técnica | Divulgação no interior |
-| IFPB | Cooperação técnica | Formação técnica |
-| UFPB | Cooperação técnica | Pesquisa e extensão |
-| USP | Colaboração BINGO | Suporte científico |
-| INPE | Colaboração BINGO | Infraestrutura |
+| UEPB | Cooperação técnica | Infraestrutura/Pessoal |
+| IFPB | Cooperação técnica | Infraestrutura/Pessoal |
+| UFPB | Cooperação técnica | Infraestrutura/Pessoal |
+| USP | Colaboração BINGO | Infraestrutura/Pessoal |
+| INPE | Colaboração BINGO | Infraestrutura/Pessoal |
 
 #### 3.2 Parcerias Governamentais
 
 - **SEECT-PB:** Integração com políticas estaduais de C&T
-- **FAPESQ:** Cooperação em divulgação científica
+- **FAPESQ:** Fomento
 - **Prefeituras:** Ações em escolas municipais
-- **Secretarias de Educação:** Incorporação ao currículo
+- **Secretarias de Educação:** Acao nas ECITs
 
 #### 3.3 Parcerias Privadas
 
@@ -162,15 +162,13 @@ Baseada nos princípios de:
 
 **Total por núcleo:** 8 pessoas
 
-**Expansão:** Pode replicar em instituições parceiras (até 12 alunos + 4 docentes)
+**Expansão:** Pode replicar em instituições parceiras.
 
 ## Orçamento Estimado (Ano 1)
 
 | Categoria | Valor (R$) |
 |-----------|------------|
-| Bolsa (1 bolsista × 6 meses × R$ 400) | 2.400,00 |
 | Material de consumo | 5.000,00 |
-| Equipamentos de demonstração | 8.000,00 |
 | Impressões gráficas | 3.000,00 |
 | Deslocamentos | 5.000,00 |
 | Eventos | 4.000,00 |

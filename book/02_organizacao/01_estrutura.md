@@ -16,9 +16,9 @@ O projeto está organizado em **núcleos**, cada um com funções específicas, 
 
 #### Núcleo 0: Laniakea
 
-Corresponde aos stakeholders do projeto. É constituído por representantes dos coordenadores do projeto juntamente com representantes do gerenciamento do projeto radiotelescópio BINGO e demais atores relevantes, a exemplo de financiadores.
+Corresponde aos stakeholders do projeto. É constituído por representantes dos coordenadores do projeto juntamente com representantes do gerenciamento do projeto radiotelescópio BINGO, convidados experts da area de comunicacao e stakeholders.
 
-#### Núcleo 1: Magellan — Ferramentas TIC
+#### Núcleo 1: Magellan — Tecnologia da Informacao
 
 Encarregado de promover um workflow para os demais projetos que garanta a qualidade das informações, sua temporalidade, reservas de direito, promoção de uma boa experiência para os usuários de todos os níveis. 
 
@@ -65,9 +65,9 @@ Este é o local de troca de informações dos coordenadores de todos os projetos
 | **Afinidade de Área** | Comunicação Social / Educomunicação / Arte e Mídia / Jornalismo / Cinema |
 | **Função** | Comunicação de profundidade e autoridade |
 | **Responsabilidades** | Produção audiovisual longo; Canais de streaming; Entrevistas e debates; Documentários e séries |
-| **Produtos** | Podcasts Spotify, vídeos YouTube, documentários, webinários, lives |
+| **Produtos** | Podcasts Spotify, vídeos YouTube,  webinários, lives |
 
-Do ponto de vista da aplicação do programa ao PROBEX/UFCG, o núcleo *Virgo* representa a coordenação do programa e os núcleos *Magellan*, *Triangullum*, *Via Lactea* e *Andromeda* representam os projetos.
+Do ponto de vista da aplicação do programa ao PROBEX/UFCG, que consistita no nucleo da proposta, o núcleo *Virgo* representa a coordenação do programa e os núcleos *Magellan*, *Triangullum*, *Via Lactea* e *Andromeda* representam os projetos.
 
 ### 2.2 Estrutura das Equipes
 
@@ -80,7 +80,7 @@ Cada núcleo operacional (Via Láctea, Andromeda, Triangulum, Magellan) possui:
 | **Bolsista PROBEX** | 1 | Graduação na área de afinidade |
 | **Voluntários** | 5 | Graduação em áreas afins |
 
-**Expansão:** Os núcleos podem se replicar em instituições parceiras, atingindo até **12 alunos + 4 docentes** por núcleo distribuídos.
+**Expansão:** Os núcleos podem se replicar em instituições parceiras, mantendo a essencia de sua estrutura.
 
 ### 2.3 Dinâmica de Trabalho
 

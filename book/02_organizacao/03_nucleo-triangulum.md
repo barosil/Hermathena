@@ -72,14 +72,8 @@ Produzir conteúdo audiovisual e jornalístico de alta qualidade que aprofunde o
 
 ### 3. Documentários
 
-#### 3.1 Documentário Principal: "BINGO: Olhos no Sertão"
-- **Duração:** 45-60 minutos
-- **Formato:** Documentário científico
-- **Lançamento:** Final do primeiro ano
-- **Sinopse:** A história do primeiro radiotelescópio de grande porte do Brasil, desde sua concepção até as primeiras observações
-- **Distribuição:** YouTube, streaming educacional, TVs públicas
 
-#### 3.2 Documentários Curtos (15 min)
+#### 3.1 Documentários Curtos (15 min)
 
 | Título | Tema | Prazo |
 |--------|------|-------|
@@ -248,19 +242,19 @@ Produzir conteúdo audiovisual e jornalístico de alta qualidade que aprofunde o
 
 **Total por núcleo:** 8 pessoas
 
-**Expansão:** Pode replicar em instituições parceiras (até 12 alunos + 4 docentes)
+**Expansão:** Pode replicar em instituições parceiras.
 
 ## Orçamento Estimado (Ano 1)
 
 | Categoria | Valor (R$) |
 |-----------|------------|
-| Bolsa (1 bolsista × 6 meses × R$ 400) | 2.400,00 |
 | Equipamentos (câmera, áudio, iluminação) | 20.000,00 |
 | Software e assinaturas | 3.000,00 |
-| Produção de documentário | 8.000,00 |
+| diarias | 8.000,00 |
 | Deslocamentos para gravações | 5.000,00 |
-| Infraestrutura de estúdio | 4.000,00 |
 | **Total** | **48.400,00** |
+
+Parcerias nas universidades podem contribuir para o uso de equipamento e est'udios.
 
 ## Referências e Benchmarking
 

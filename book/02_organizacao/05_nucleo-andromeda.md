@@ -18,8 +18,8 @@ Criar conexões emocionais e intelectuais entre o público e o Radiotelescópio 
 ### 1. Gestão de Redes Sociais
 
 #### 1.1 Instagram
-- [ ] Criar e manter perfil oficial do Projeto Hermathena/BINGO PB
-- [ ] Publicar feed diário com conteúdo variado
+- [ ] manter perfil oficial do Projeto BINGO
+- [ ] Publicar feed semanal com conteúdo variado
 - [ ] Produzir Stories com interatividade (enquetes, caixinhas de perguntas)
 - [ ] Desenvolver Reels virais sobre astronomia e cosmologia
 - [ ] Alcançar 5.000 seguidores no primeiro ano
@@ -45,11 +45,11 @@ Criar conexões emocionais e intelectuais entre o público e o Radiotelescópio 
 
 | Plataforma | Formato Principal | Frequência | Tom |
 |------------|-------------------|------------|-----|
-| Instagram | Carrossel educativo | Diário | Inspirador |
-| Instagram | Reels | 3x/semana | Entretenimento |
-| Stories | Interativo | Diário | Conversacional |
-| Facebook | Posts longos | 3x/semana | Informativo |
-| TikTok | Vídeos curtos | Diário | Descontraído |
+| Instagram | Carrossel educativo | semanal | Inspirador |
+| Instagram | Reels | semanal | Entretenimento |
+| Stories | Interativo | semanal | Conversacional |
+| Facebook | Posts longos | semanal | Informativo |
+| TikTok | Vídeos curtos | semanal | Descontraído |
 
 #### 2.2 Linhas Editoriais
 
@@ -84,11 +84,11 @@ Criar conexões emocionais e intelectuais entre o público e o Radiotelescópio 
 
 | Tipo | Quantidade Anual | Exemplos |
 |------|-----------------|----------|
-| Infográficos | 50 | "O que são BAO?", "Escala do Universo" |
-| Vídeos curtos | 100 | Reels, TikToks, Shorts |
-| Memes educativos | 30 | Astronomia em formato humor |
-| GIFs animados | 40 | Fenômenos astronômicos |
-| Wallpapers | 24 | Imagens do espaço com marca |
+| Infográficos | 12 | "O que são BAO?", "Escala do Universo" |
+| Vídeos curtos | 24 | Reels, TikToks, Shorts |
+| Memes educativos | 24 | Astronomia em formato humor |
+| GIFs animados | 24 | Fenômenos astronômicos |
+| Wallpapers | 6 | Imagens do espaço com marca |
 
 #### 3.2 Série Regular "BINGO Responde"
 
@@ -101,10 +101,10 @@ Formato: Vídeos curtos respondendo perguntas do público
 
 #### 4.1 Estratégias de Interação
 
-- **Responder todos os comentários** em até 2 horas
+- **Responder todos os comentários**
 - **Compartilhar posts de seguidores** que mencionarem o projeto
 - **Criar desafios mensais** com premiação simbólica
-- **Live semanal** com especialistas (colaboração com Núcleo Triangulum)
+- **Live mensal** com especialistas (colaboração com Núcleo Triangulum)
 
 #### 4.2 Parcerias com Influenciadores
 
@@ -199,7 +199,7 @@ Formato: Vídeos curtos respondendo perguntas do público
 | Agosto | Dia do Estudante | Carreiras STEM | #FuturoBINGO |
 | Setembro | Semana Nacional de Ciência | Divulgação massiva | #BINGOCiencia |
 | Outubro | Dia das Crianças | Astronomia para pequenos | #BINGOKids |
-| Novembro | Black Friday | Curso/materiais promocionais | #BINGOBlack |
+| Novembro | Eventos da Ciencia | cobertura de eventos SAB, SBF | #BINGOSABSBF |
 | Dezembro | Retrospectiva | Melhores momentos do ano | #BINGO2026 |
 
 ## Estrutura da Equipe
@@ -213,17 +213,14 @@ Formato: Vídeos curtos respondendo perguntas do público
 
 **Total por núcleo:** 8 pessoas
 
-**Expansão:** Pode replicar em instituições parceiras (até 12 alunos + 4 docentes)
+**Expansão:** Pode replicar em instituições parceiras.
 
 ## Orçamento Estimado (Ano 1)
 
 | Categoria | Valor (R$) |
 |-----------|------------|
-| Bolsa (1 bolsista × 6 meses × R$ 400) | 2.400,00 |
-| Assinaturas de ferramentas | 3.600,00 |
-| Equipamentos (ring light, tripé) | 2.000,00 |
 | Eventos e parcerias | 3.000,00 |
-| **Total** | **28.000,00** |
+| **Total** | **3.000,00** |
 
 ## Benchmarking
 
