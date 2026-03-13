@@ -22,7 +22,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Build with MyST
-        uses: executablebooks/mystmd/action-build@main
+        uses: executablebooks/mystmd@main
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
