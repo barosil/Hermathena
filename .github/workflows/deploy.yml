@@ -24,7 +24,7 @@ jobs:
       - name: Build with MyST
         uses: executablebooks/mystmd@main
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: executablebooks/mystmd/.github/actions/build@main
         with:
           path: _build/site
 
