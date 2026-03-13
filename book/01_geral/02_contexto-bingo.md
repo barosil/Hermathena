@@ -46,7 +46,6 @@ O projeto é uma parceria entre:
 | **Brasil** | USP, INPE, UFCG, UFPB | Coordenação científica, instalação, operação |
 | **Reino Unido** | Universities of Manchester, Oxford | Instrumentação, análise de dados |
 | **China** | CAS, Yangzhou University | Espelhos, estrutura mecânica |
-| **Suíça** | FHNW | Eletrônica de receptor |
 | **África do Sul** | SARAO | Troca de expertise em radioastronomia |
 
 ## Significado para o Brasil

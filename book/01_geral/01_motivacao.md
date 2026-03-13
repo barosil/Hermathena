@@ -6,11 +6,10 @@ O projeto **Hermathena** nasce da confluência entre dois domínios que, à prim
 
 É com esse espírito que o projeto Hermathena se propõe a construir pontes entre a pesquisa científica de excelência conduzida no âmbito do Radiotelescópio BINGO e a sociedade paraibana — em especial as comunidades do sertão que convivem, literalmente, com um dos instrumentos científicos mais sofisticados já construídos no Brasil.
 
-O projeto é um desdobramento direto do Programa de Extensão BINGO (PROBEX/UFCG), e emerge num momento em que o investimento em ciência e tecnologia no Estado da Paraíba alcança uma escala histórica, articulando instituições de ensino, esferas de governo e parceiros internacionais em torno de três grandes iniciativas:
+O projeto é um desdobramento direto do Programa de Extensão **BINGO - Lutando pela ciência no sertão paraibano** (PROBEX/UFCG), desenvolvido nos últimos 5 anos, e emerge num momento em que o investimento em ciência e tecnologia no Estado da Paraíba alcança uma escala histórica, articulando instituições de ensino, esferas de governo e parceiros internacionais em torno de grandes iniciativas:
 
 - O **Radiotelescópio BINGO**, em Aguiar;
 - A **Cidade da Astronomia**, em Carrapateira;
-- O **Centro de Computação Quântica**, em fase de planejamento.
 
 Diante desse cenário, comunicar ciência deixa de ser uma obrigação burocrática e torna-se um ato político e pedagógico: é a condição para que o desenvolvimento científico se converta em desenvolvimento humano.
 
@@ -23,7 +22,7 @@ Estabelecer as bases para garantir, registrar e potencializar as ações das equ
 
 Este significado foi rapidamente compreendido pelos membros da colaboração, pelos gestores das instituições públicas de ensino da Paraíba, por órgãos de fomento e, sobretudo, pelo Governo do Estado da Paraíba, que aportou recursos significativos além de planejar e iniciar obras estruturantes no alto sertão — com a pavimentação das rodovias do entorno do radiotelescópio e com a criação do projeto Cidade da Astronomia, no município de Carrapateira.
 
-O Radiotelescópio BINGO é, por natureza, um projeto inter e transdisciplinar. Sua construção e operação mobilizam simultaneamente competências em física, engenharia, computação, ciências ambientais, ciências sociais e comunicação — áreas que não apenas coexistem, mas precisam dialogar para que o projeto cumpra seu potencial. Essa característica se reflete diretamente na estrutura do projeto Hermathena, que reúne equipes de diferentes instituições — UFCG, UFPB, UEPB, IFPB, além de parceiros internacionais — numa prática genuína de ciência colaborativa, em que o conhecimento é produzido e compartilhado de forma distribuída, superando fronteiras disciplinares e institucionais.
+O Radiotelescópio BINGO é, por natureza, um projeto inter e transdisciplinar. Sua construção e operação mobilizam simultaneamente competências em física, engenharia, computação, ciências ambientais, ciências sociais e comunicação — áreas que não apenas coexistem, mas precisam dialogar para que o projeto cumpra seu potencial. Essa característica se reflete diretamente na estrutura do projeto Hermathena, que pretende reunir equipes de diferentesinstituições — UFCG, UFPB, UEPB, IFPB, além de parceiros internacionais — numa prática genuína de ciência colaborativa, em que o conhecimento é produzido e compartilhado de forma distribuída, superando fronteiras disciplinares e institucionais.
 
 Mais do que um feito científico, a instalação do BINGO no sertão paraibano representa uma oportunidade concreta de enfrentamento de demandas históricas da população regional: a escassez de oportunidades educacionais e profissionais em uma das regiões mais carentes do estado, a ausência de infraestrutura tecnológica e a distância entre as comunidades locais e os circuitos de produção do conhecimento. Nesse sentido, o esforço de comunicação científica proposto pelo Hermathena é também um esforço educacional — voltado para despertar vocações científicas e tecnológicas nas novas gerações, fortalecer a formação de professores da educação básica e criar laços duradouros entre a universidade e a sociedade do sertão.
 
