@@ -10,13 +10,13 @@ project:
     - convite/
     - notebooks/
     - scripts/
+    - destinatarios.md
   exports:
     - format: pdf
       template: plain_latex_book
-      engine: xelatex
+      engine: playwright
       class: report
       titlepage: true
-      toc: true
       number_sections: true
       header-includes:
         - \usepackage{graphicx}
@@ -25,15 +25,16 @@ project:
         - \fancyhead[L]{Projeto Hermathena}
         - \fancyhead[R]{Radiotelescópio BINGO}
 
-
 site:
   template: book-theme
   options:
+    css: assets/css/custom.css
     edit-link: false
     favicon: assets/logos/favicon/favicon.ico
     logo: assets/logos/bingo_logo.png
 
 toc:
+  - file: book/00_convite.md
   - title: Fundamentos
     children:
       - file: book/01_geral/intro.md

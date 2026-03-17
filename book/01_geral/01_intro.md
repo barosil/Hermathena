@@ -21,15 +21,7 @@ Este documento serve simultaneamente como:
   - 4 bolsas de 6 meses
   - ❗Precisa formar a equipe multidisciplunr.
 - 🟠 Contato com as outras instituições paraibanas, todas tem editais de escopo e desenho semelhante ao da UFCG, para replicar a estrutura do projeto, agregar mais bolsistas e uma maior equipe de docentes. No gerenciamento dos projetos em comum, distribuir tarefas de maneira a miniorar interdependência.
-  - **UEPB**: Contato natural é *Jamilton*, mas tenho encontrado dificuldade de receber respostas. Podemos contatar *Messias*, que deve topar uma parte da proposta, mas uma interação com a administração central é necessária para  agregar mais estrutura. 
-    - A UEPB tem excelentes recursos na comunicação social.
-  - **IFPB**: Contatos diretos com *Mary Roberta* e *Alysson Macario* devem ser suficientes.
-  - **UFPB**: Até onde sei, não existe presença significativa de práticas extensionistas no CCEN, mas um diálogo com a administração central é bastante fácil e professores como o **Jorge Gabriel** podem aceitar abraçar a proposta.
-- 🟠 Contato com algumas instituições de fora da Paraíba que poderiam estar dispostas a articular suas ações e contribuir para um incremento nos recursos humanos para o projeto.
-  - **UFCA**: Edson Otoniel já se manifestou disposto outrora e esta seria uma possível porta.
-  - **UNIFEI**: Alan Pavan já se envolveu em iniciativas e extensão, o que faltou foi coordenação de ações.
-  - Na mesma linha, Carlos Molina, Leonardo Sioufi, Karlucio (pela UFPB, ao longo deste ano), Bertha.
-- 🟠 Contato com a **UFRN**, que conta com bons recursos. Não temos um nome para indicação de contato.
+  - **UEPB**, **IFPB**, *UFPB**, **UFCA**, **UNIFEI**, **UFRN**
 - 🟠 Existe um calendário de chamadas CNPq e CAPES para os quais a temática Educação/Comunicação/Extensão pode concorrer.
 - 🔴 Contato com as instituições particulares da Paraíba que contam com cursos afins e tem reputação: **NASSAU** e **UNIFACISA**.
   - Considerando que o regime de trabalho das particulares é bastante mais intenso, é melhor um diálogo institucional para viabilizar uma eventual parceria.

@@ -1,0 +1,41 @@
+/* força cards a preencherem grid corretamente */
+.sd-grid {
+  align-items: stretch;
+}
+
+/* padroniza comportamento dos cards */
+.sd-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 1.2rem;
+  border: none;
+}
+
+/* títulos */
+.sd-card-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card-via .sd-card {
+  background: #0b3c5d;
+  color: white;
+}
+
+.card-andromeda {
+  background: #7b2cbf;
+  color: white;
+}
+
+.card-triangulum {
+  background: #1b4332;
+  color: white;
+}
+
+.card-magellan {
+  background: #003049;
+  color: white;
+}
