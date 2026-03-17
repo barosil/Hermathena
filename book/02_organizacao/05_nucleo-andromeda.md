@@ -1,3 +1,6 @@
+---
+---
+
 # Núcleo Andromeda: Comunicação de Engajamento
 
 ![](../../assets/images/andromeda.jpeg)
@@ -142,13 +145,8 @@ Formato: Vídeos curtos respondendo perguntas do público
 
 ### Fluxo de Produção de Conteúdo
 
-```mermaid
-flowchart TD
-    A[1. PLANEJAMENTO<br>Calendário editorial] --> B[2. PRODUÇÃO<br>Criação de peças visuais]
-    B --> C[3. AGENDAMENTO<br>Programação nos canais]
-    A --> D[4. ANÁLISE<br>Métricas e aprendizados]
-    C --> E[5. PUBLICAÇÃO<br>Postagem e monitoração]
-```
+![Diagrama Mermaid](../../assets/diagrams/book_02_organizacao_05_nucleo-andromeda_mermaid_1.png)
+
 
 ### Processo de Criação
 

@@ -1,3 +1,6 @@
+---
+---
+
 # Núcleo Magellan: Ferramentas TIC
 
 ![hermathena](../../assets/images/magellan.jpg)
@@ -45,7 +48,6 @@ Desenvolver, implementar e manter soluções tecnológicas que automatizem proce
 | Componente | Especificação | Custo Estimado |
 |------------|---------------|----------------|
 | **Servidor NAS** | Synology DS1821+ ou similar, 5x HDD 4TB | R$ 20.000,00 |
-| **Hospedagem Cloud** | VPS 4vCPU, 8GB RAM, 200GB SSD | R$ 300,00/mês |
 | **Backup em Nuvem** | 50TB storage + backup automático | R$ 500,00/mês |
 
 #### 2.2 Serviços de IA
@@ -54,7 +56,7 @@ Desenvolver, implementar e manter soluções tecnológicas que automatizem proce
 |---------|-----|----------------|
 | **API de IA Generativa** | Chat, assistentes, sumarização | R$ 200,00/mês |
 | **Geração de Imagens** | Midjourney/DALL-E para materiais | R$ 50,00/mês |
-| **Análise de Dados** | Processamento de métricas | R$ 100,00/mês |
+
 
 #### 2.3 Sistema MAM/DAM/VAM
 
@@ -126,15 +128,8 @@ Criação de sistema de design consistente:
 
 ### Ciclo de Desenvolvimento
 
-```mermaid
-flowchart LR
-    A[Levantamento<br/>de Requisitos] --> B[Design<br/>de Solução]
-    B --> C[Desenvolvimento]
-    C --> D[Testing]
-    D --> E[Deploy]
-    E --> F[Monitoramento]
-    F --> A
-```
+![Diagrama Mermaid](../../assets/diagrams/book_02_organizacao_02_nucleo-magellan_mermaid_1.png)
+
 
 ### Stack Tecnológico
 
@@ -151,37 +146,8 @@ flowchart LR
 
 ### Fluxo de Trabalho Integrado
 
-```mermaid
-flowchart TB
-    subgraph Magellan["🖥️ Núcleo Magellan"]
-        M1[Portal Web]
-        M2[Automações]
-        M3[Ferramentas Internas]
-    end
-    
-    subgraph ViaLactea["🌌 Núcleo Via Láctea"]
-        V1[Conteúdo Educacional]
-        V2[Material Institucional]
-    end
-    
-    subgraph Andromeda["🌠 Núcleo Andromeda"]
-        A1[Redes Sociais]
-        A2[Conteúdo Viral]
-    end
-    
-    subgraph Triangulum["🔭 Núcleo Triangulum"]
-        T1[Podcasts]
-        T2[Vídeos]
-    end
-    
-    Magellan -->|Hospeda| ViaLactea
-    Magellan -->|Automatiza| Andromeda
-    Magellan -->|Distribui| Triangulum
-    
-    ViaLactea -->|Publica em| Magellan
-    Andromeda -->|Integra APIs| Magellan
-    Triangulum -->|Usa plataformas| Magellan
-```
+![Diagrama Mermaid](../../assets/diagrams/book_02_organizacao_02_nucleo-magellan_mermaid_2.png)
+
 
 ## Produtos Esperados
 
@@ -214,8 +180,7 @@ flowchart TB
 | Item | Quantidade | Valor Unitário (R$) | Valor Total (R$) |
 |------|------------|---------------------|------------------|
 | Servidor NAS | 1 | 20.000,00 | 20.000,00 |
-| Laptops para equipe | 5 | 5.000,00 | 25.000,00 |
-| **Subtotal Capital** | | | **45.000,00** |
+| **Subtotal Capital** | | | **20.000,00** |
 
 ### Custeio (Mensal/Anual)
 
@@ -224,18 +189,23 @@ flowchart TB
 | Hospedagem cloud | 1 | R$ 150,00 | R$ 1.800,00 |
 | Serviços de IA | 1 | R$ 100,00 | R$ 1.200,00 |
 | Software e licenças | 1 | R$ 180,00 | R$ 2.160,00 |
-| Bolsa PROBEX (bolsista) | 3 | R$ 1.200,00 | R$ 7.200,00* |
-| **Subtotal Custeio** | | **R$ 1.630,00** | **R$ 12.360,00** |
+| **Subtotal Custeio** | | **R$ 420,00** | **R$5.160,00** |
 
-*6 meses de bolsa para 3 bolsistas
+### Bolsas
+    - Ao menos uma bolsa por módulo institucional, competitiva.
 
 ### Total Ano 1
 
 | Categoria | Valor (R$) |
 |-----------|------------|
-| Capital | 45.000,00 |
-| Custeio | 12.360,00 |
-| **TOTAL** | **57.360,00** |
+| Capital | 20.000,00 |
+| Custeio | 5.160,00 |
+| **TOTAL** | **25.160,00** |
+
+
+### Observações:
+
+- A UFCG conta com infraestrutura que permite iniciar o desenvolvimento das atividades sem custo adicional, mas os insumos de custeio são cruciais para alavancagem da qualidade e eficiência das ações.
 
 ---
 

@@ -1,118 +1,26 @@
-:::{mermaid}
-flowchart TB
+# Arquitetura do Programa
 
-L[Laniakea<br>Stakeholders]
+## A estrutura principal, quanto ao fluxo de ações: 
 
-V[Virgo<br>Steering Committee]
+![Diagrama Mermaid](../../assets/diagrams/book_02_organizacao_02_arquitetura_mermaid_1.png)
 
-M[Magellan<br>Infraestrutura Digital]
 
-VL[Via Láctea<br>Comunicação Educacional]
+## Quanto a Geração de Conteúdo
 
-A[Andromeda<br>Engajamento Digital]
+![Diagrama Mermaid](../../assets/diagrams/book_02_organizacao_02_arquitetura_mermaid_2.png)
 
-T[Triangulum<br>Comunicação de Profundidade]
 
-L --> V
-V --> M
+## Fluxo Operacional
 
-M --> VL
-M --> A
-M --> T
-:::
+![Diagrama Mermaid](../../assets/diagrams/book_02_organizacao_02_arquitetura_mermaid_3.png)
 
-:::{mermaid}
-flowchart LR
 
-VL[Via Láctea<br>conteúdo educacional]
+## Produção de Conteúdo
 
-T[Triangulum<br>conteúdo profundo]
+![Diagrama Mermaid](../../assets/diagrams/book_02_organizacao_02_arquitetura_mermaid_4.png)
 
-A[Andromeda<br>engajamento]
 
-M[Magellan<br>plataformas]
+## Workflow Digital
 
-P[Portal Web]
 
-RS[Redes Sociais]
-
-YT[YouTube / Podcast]
-
-VL --> M
-T --> M
-A --> M
-
-M --> P
-M --> RS
-M --> YT
-:::
-
-:::{mermaid}
-flowchart LR
-
-A[Demanda institucional]
-
-B[Virgo<br>priorização]
-
-C[Projeto ou campanha]
-
-D[Distribuição para núcleos]
-
-E[Produção de conteúdo]
-
-F[Publicação]
-
-G[Métricas e avaliação]
-
-A --> B
-B --> C
-C --> D
-D --> E
-E --> F
-F --> G
-G --> B
-:::
-
-:::{mermaid}
-flowchart LR
-
-R[Pesquisa científica]
-
-S[Roteiro]
-
-P[Produção]
-
-V[Validação científica]
-
-E[Edição]
-
-D[Distribuição]
-
-M[Métricas]
-
-R --> S
-S --> P
-P --> V
-V --> E
-E --> D
-D --> M
-:::
-
-:::{sphinx}
-flowchart TB
-
-C[Conteúdo]
-
-CMS[CMS / Portal]
-
-API[APIs redes sociais]
-
-SCH[Agendamento]
-
-ANA[Analytics]
-
-C --> CMS
-CMS --> API
-API --> SCH
-SCH --> ANA
-:::
+![Diagrama Mermaid](../../assets/diagrams/book_02_organizacao_02_arquitetura_mermaid_5.png)

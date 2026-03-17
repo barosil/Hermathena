@@ -1,3 +1,6 @@
+---
+---
+
 # Núcleo Via Láctea: Comunicação Institucional e Educacional
 
 ![](../../assets/images/vialactea.jpg)
@@ -109,16 +112,8 @@ Baseada nos princípios de:
 
 ### Processo de Produção de Material
 
-```mermaid
-flowchart TD
-    A[1. PESQUISA<br>Análise de necessidades] --> B[2. ROTEIRO<br>Estruturação do conteúdo]
-    B --> C[3. PRODUÇÃO<br>Criação de peças]
-    C --> D[4. REVISÃO<br>Validação com público]
-    D --> E[5. PUBLICAÇÃO<br>Disponibilização formal]
-    E --> F[6. DIFUSÃO<br>Distribuição nos canais]
-    F --> G[7. AVALIAÇÃO<br>Métricas de impacto]
-    G --> H[8. ATUALIZA<br>Melhorias contínuas]
-```
+![Diagrama Mermaid](../../assets/diagrams/book_02_organizacao_04_nucleo-via-lactea_mermaid_1.png)
+
 
 ## Cronograma de Ações (Ano 1)
 
@@ -165,6 +160,11 @@ flowchart TD
 | Deslocamentos | 5.000,00 |
 | Eventos | 4.000,00 |
 | **Total** | **33.400,00** |
+
+
+### Observações:
+
+- A UFCG conta com infraestrutura que permite iniciar o desenvolvimento das atividades sem custo adicional, mas os insumos de custeio são cruciais para alavancagem da qualidade e eficiência das ações. Parte dos deslocamentos poderiam ser custeados com diárias e passagens das unidades acadêmicas envolvidas.
 
 ---
 

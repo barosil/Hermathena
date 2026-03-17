@@ -5,49 +5,57 @@ project:
   authors:
     - Luciano Barosi
   license: CC-BY-4.0
+  exclude:
+    - README.md
+    - convite/
+    - notebooks/
+    - scripts/
+  exports:
+    - format: pdf
+      template: plain_latex_book
+      engine: xelatex
+      class: report
+      titlepage: true
+      toc: true
+      number_sections: true
+      header-includes:
+        - \usepackage{graphicx}
+        - \usepackage{fancyhdr}
+        - \pagestyle{fancy}
+        - \fancyhead[L]{Projeto Hermathena}
+        - \fancyhead[R]{Radiotelescópio BINGO}
+
 
 site:
   template: book-theme
-
-latex:
-  engine: pdflatex
-  class: report
-  titlepage: true
-  header-includes:
-    - \usepackage{graphicx}
-    - \usepackage{fancyhdr}
-    - \pagestyle{fancy}
-    - \fancyhead[L]{Projeto Hermathena}
-    - \fancyhead[R]{Radiotelescópio BINGO}
+  options:
+    edit-link: false
+    favicon: assets/logos/favicon/favicon.ico
+    logo: assets/logos/bingo_logo.png
 
 toc:
-  - file: book/index.md
-
   - title: Fundamentos
     children:
-      - file: book/motivacao.md
-      - file: book/contexto-bingo.md
+      - file: book/01_geral/intro.md
+      - file: book/01_geral/ecossistema.md
+      - file: book/01_geral/motivacao.md
+      - file: book/01_geral/contexto-bingo.md
 
   - title: Estrutura Organizacional
     children:
-      - file: book/organizacao/estrutura.md
-      - file: book/organizacao/nucleos.md
+      - file: book/02_organizacao/estrutura.md
+      - file: book/02_organizacao/nucleos.md
 
   - title: Estratégia
     children:
-      - file: book/estrategia/educomunicacao.md
-      - file: book/estrategia/canais.md
+      - file: book/03_estrategia/educomunicacao.md
+      - file: book/03_estrategia/canais.md
 
   - title: Operação
     children:
-      - file: book/operacao/fase1.md
-      - file: book/operacao/cronograma.md
+      - file: book/04_operacao/fase1.md
+      - file: book/04_operacao/cronograma.md
 
   - title: Financiamento
     children:
-      - file: book/financiamento/orcamento.md
-      - file: book/financiamento/parceiros.md
-
-  - title: Anexos
-    children:
-      - file: book/anexos/glossario.md
+      - file: book/05_financiamento/orcamento.md

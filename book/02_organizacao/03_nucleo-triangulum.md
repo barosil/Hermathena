@@ -1,3 +1,6 @@
+---
+---
+
 # Núcleo Triangulum: Comunicação de Profundidade
 
 ![](../../assets/images/triangulum.jpg)
@@ -148,13 +151,8 @@ Produzir conteúdo audiovisual e jornalístico de alta qualidade que aprofunde o
 
 ### Fluxo de Produção de Documentário
 
-```mermaid
-flowchart TD
-    A[1. PRÉ-PRODUÇÃO<br>• Pesquisa<br>• Roteiro<br>• Planejamento<br>• Permissões] --> B[2. PRODUÇÃO<br>• Filmagens<br>• Entrevistas<br>• B-roll<br>• Áudio]
-    B --> C[3. PÓS-PRODUÇÃO<br>• Edição<br>• Áudio<br>• Finalização<br>• Legendas]
-    A --> D[4. REVISÃO<br>• Validação científica<br>• Ajustes]
-    C --> E[5. DISTRIBUIÇÃO<br>• YouTube<br>• Podcasts<br>• Imprensa]
-```
+![Diagrama Mermaid](../../assets/diagrams/book_02_organizacao_03_nucleo-triangulum_mermaid_1.png)
+
 
 ## Cronograma de Produção (Ano 1)
 
