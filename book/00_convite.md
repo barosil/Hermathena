@@ -1,7 +1,7 @@
 ---
-html_theme:
-  sidebar-secondary:
-    remove: true
+site:
+  options:
+    hide_outline: true
 ---
 
 # Um convite
