@@ -3,28 +3,60 @@ project:
   title: Projeto Hermathena
   subtitle: Comunicação Multimídia do Radiotelescópio BINGO
   authors:
-    - Luciano Barosi
+  - Luciano Barosi
   license: CC-BY-4.0
   exclude:
-    - README.md
-    - convite/
-    - notebooks/
-    - scripts/
-    - destinatarios.md
+  - README.md
+  - convite/
+  - notebooks/
+  - scripts/
+  - destinatarios.md
+  - FLUEX/
+  - book/00_convite.md
   exports:
-    - format: pdf
-      template: plain_latex_book
-      engine: playwright
-      class: report
-      titlepage: true
-      number_sections: true
-      header-includes:
-        - \usepackage{graphicx}
-        - \usepackage{fancyhdr}
-        - \pagestyle{fancy}
-        - \fancyhead[L]{Projeto Hermathena}
-        - \fancyhead[R]{Radiotelescópio BINGO}
-
+  - format: pdf
+    template: plain_latex_book
+    engine: playwright
+    class: report
+    titlepage: true
+    number_sections: true
+    header-includes:
+    - \usepackage{graphicx}
+    - \usepackage{fancyhdr}
+    - \pagestyle{fancy}
+    - \fancyhead[L]{Projeto Hermathena}
+    - \fancyhead[R]{Radiotelescópio BINGO}
+  toc:
+  - file: book/01_geral/01_intro.md
+  - title: Fundamentos
+    children:
+    - file: book/01_geral/02_ecossistema.md
+    - file: book/01_geral/03_motivacao.md
+    - file: book/01_geral/04_contexto-bingo.md
+  - title: Estrutura Organizacional
+    children:
+    - file: book/02_organizacao/01_estrutura.md
+    - file: book/02_organizacao/02_nucleo-magellan.md
+    - file: book/02_organizacao/03_nucleo-triangulum.md
+    - file: book/02_organizacao/04_nucleo-via-lactea.md
+    - file: book/02_organizacao/05_nucleo-andromeda.md
+  - title: Estratégia
+    children:
+    - file: book/03_estrategia/01_educomunicacao.md
+    - file: book/03_estrategia/02_canais.md
+  - title: Operação
+    children:
+    - file: book/05_operacao/fase1.md
+    - file: book/05_operacao/fase2.md
+    - file: book/05_operacao/fase3.md
+    - file: book/05_operacao/fase4.md
+    - file: book/05_operacao/cronograma.md
+  - title: Material de Apoio
+    children:
+    - pattern: book/06_material/*.md
+  - title: Financiamento
+    children:
+    - file: book/04_financiamento/orcamento.md
 site:
   template: book-theme
   options:
@@ -32,31 +64,3 @@ site:
     edit-link: false
     favicon: assets/logos/favicon/favicon.ico
     logo: assets/logos/bingo_logo.png
-
-toc:
-  - file: book/00_convite.md
-  - title: Fundamentos
-    children:
-      - file: book/01_geral/intro.md
-      - file: book/01_geral/ecossistema.md
-      - file: book/01_geral/motivacao.md
-      - file: book/01_geral/contexto-bingo.md
-
-  - title: Estrutura Organizacional
-    children:
-      - file: book/02_organizacao/estrutura.md
-      - file: book/02_organizacao/nucleos.md
-
-  - title: Estratégia
-    children:
-      - file: book/03_estrategia/educomunicacao.md
-      - file: book/03_estrategia/canais.md
-
-  - title: Operação
-    children:
-      - file: book/04_operacao/fase1.md
-      - file: book/04_operacao/cronograma.md
-
-  - title: Financiamento
-    children:
-      - file: book/05_financiamento/orcamento.md

@@ -16,10 +16,10 @@ O cronograma do Projeto Hermathena está estruturado em quatro fases progressiva
 ![Diagrama Mermaid](../../assets/diagrams/book_05_operacao_cronograma_mermaid_2.png)
 
 
-* **Setup** → Estruturação do projeto
-* **Implementação** → Execução das ações
-* **Expansão** → Ampliação do alcance
-* **Consolidação** → Avaliação e sustentabilidade
+* **Setup:** Estruturação do projeto
+* **Implementação:** Execução das ações
+* **Expansão:** Ampliação do alcance
+* **Consolidação:** Avaliação e sustentabilidade
 
 ---
 

@@ -26,10 +26,10 @@ A Fase 1 do Projeto Hermathena estabelece as bases estruturais, técnicas e huma
 ![Diagrama Mermaid](../../assets/diagrams/book_05_operacao_fase1_mermaid_2.png)
 
 
-* **Setup** → equipe + infraestrutura
-* **Identidade** → marca + materiais
-* **Conteúdo** → produção inicial
-* **Lançamento** → ativação pública
+* **Setup:** equipe + infraestrutura
+* **Identidade:** marca + materiais
+* **Conteúdo:** produção inicial
+* **Lançamento:** ativação pública
 
 ---
 
