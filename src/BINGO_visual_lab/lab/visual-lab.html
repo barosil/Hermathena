@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hermathena · Visual Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --grafite:#2B3147; --azul-profundo:#08268F; --azul-bingo:#3F6CCF;
+  --cyan:#22D3EE; --roxo:#5A3FB2; --terracota:#C75A2E;
+  --laranja:#F28A34; --branco:#F7F1E8; --ouro:#C9A34A;
+  --line:#C4C0B7; --paper:#F7F1E8; --ink:#2B3147;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:"Inter",system-ui,sans-serif; line-height:1.45;
+}
+h1,h2,h3,.display{font-family:"Outfit",sans-serif}
+a{color:var(--azul-profundo)}
+.wrap{max-width:1280px;margin:0 auto;padding:24px 20px 72px}
+
+header.hero{border-bottom:3px solid var(--grafite);padding-bottom:14px;margin-bottom:20px}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--terracota)}
+h1{margin:6px 0 8px;font-size:clamp(28px,4vw,44px);line-height:1.02;letter-spacing:-.025em;font-weight:700}
+header.hero p{margin:0;max-width:820px;font-size:14px}
+.tag{display:inline-block;margin-top:10px;padding:5px 10px;border-radius:999px;background:var(--grafite);color:var(--branco);font-size:10px;font-weight:700;letter-spacing:.03em}
+
+.grid{display:grid;grid-template-columns:minmax(320px,420px) 1fr;gap:22px;align-items:start}
+
+.panel{border:2px solid var(--grafite);border-radius:16px;padding:16px;background:#fffdf9}
+.panel h2{margin:0 0 12px;font-size:17px}
+.field{margin:0 0 16px}
+.field > label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.hint{font-size:11px;color:#555;margin-top:5px}
+
+.seg{display:flex;gap:6px}
+.seg button{
+  flex:1;padding:8px 6px;border:2px solid var(--grafite);border-radius:10px;
+  background:transparent;color:var(--grafite);font:inherit;font-size:12px;font-weight:600;cursor:pointer
+}
+.seg button[aria-pressed="true"]{background:var(--grafite);color:var(--branco)}
+
+select{
+  width:100%;padding:9px 10px;border:2px solid var(--grafite);border-radius:10px;
+  background:#fffdf9;color:var(--ink);font:inherit;font-size:13px
+}
+select:disabled{opacity:.5;cursor:not-allowed}
+
+.swatch-row{display:flex;gap:8px;flex-wrap:wrap}
+.swatch{
+  width:34px;height:34px;border-radius:9px;border:2px solid rgba(0,0,0,.18);cursor:pointer;
+  position:relative;padding:0
+}
+.swatch[aria-pressed="true"]{outline:3px solid var(--grafite);outline-offset:2px}
+.swatch.blocked{cursor:not-allowed}
+.swatch.blocked::after{
+  content:"⊘";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:16px;text-shadow:0 0 3px rgba(0,0,0,.6)
+}
+
+.note{font-size:12px;border-left:4px solid var(--laranja);padding:8px 10px;background:rgba(242,138,52,.08);border-radius:0 8px 8px 0}
+.note.warn{border-color:var(--terracota);background:rgba(199,90,46,.1)}
+.note.ok{border-color:#2f7d4f;background:rgba(47,125,79,.1)}
+
+.preview{border-radius:16px;overflow:hidden;border:2px solid var(--grafite)}
+.pv-head{padding:16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.pv-head .logo{font-family:"Outfit";font-weight:700;font-size:18px;letter-spacing:-.01em}
+.pv-nav{display:flex;gap:10px;font-size:13px}
+.pv-body{padding:20px;display:grid;gap:14px}
+.pv-card{padding:16px;border-radius:14px}
+.pv-card h3{margin:0 0 6px;font-size:18px}
+.pv-card p{margin:0;font-size:13px}
+.pv-actions{display:flex;gap:10px;flex-wrap:wrap}
+.pv-btn{padding:9px 16px;border-radius:10px;font-weight:600;font-size:13px;border:0}
+.pv-btn.ghost{background:transparent;border:2px solid currentColor}
+
+.css-out{
+  margin-top:8px;border:2px solid var(--grafite);border-radius:12px;overflow:hidden
+}
+.css-out header{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:var(--grafite);color:var(--branco)}
+.css-out header strong{font-family:"Outfit";font-size:13px}
+.css-out button{
+  border:1px solid var(--branco);background:transparent;color:var(--branco);
+  border-radius:8px;padding:4px 10px;font:inherit;font-size:11px;cursor:pointer
+}
+pre{margin:0;padding:14px;background:#fffdf9;color:var(--ink);font-size:12px;overflow:auto;max-height:340px}
+
+table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line)}
+th{font-family:"Outfit";font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+
+@media(max-width:900px){ .grid{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">Projeto Hermathena · identidade visual</div>
+    <h1>Visual Lab</h1>
+    <p>
+      Ferramenta restrita para explorar combinações cromáticas conforme as diretrizes de marca.
+      Selecione o fundo, o número de cores e os papéis, ou parta de um eixo temático. A seleção
+      gera um CSS simples para uso imediato.
+    </p>
+    <div class="tag">PARÂMETROS RESTRITOS · CIANO, ROXO E OURO NÃO SÃO CORES PRIMÁRIAS</div>
+  </header>
+
+  <div class="grid">
+
+    <!-- ============ CONTROLES ============ -->
+    <section class="panel" aria-label="Controles">
+      <h2>Parâmetros</h2>
+
+      <div class="field">
+        <label for="fundo">Fundo</label>
+        <div class="seg" id="fundoSeg" role="group">
+          <button type="button" data-fundo="claro" aria-pressed="true">Claro</button>
+          <button type="button" data-fundo="escuro" aria-pressed="false">Escuro</button>
+        </div>
+        <p class="hint" id="fundoHint"></p>
+      </div>
+
+      <div class="field">
+        <label for="eixo">Eixo temático <span style="font-weight:400;text-transform:none">(opcional)</span></label>
+        <select id="eixo"></select>
+        <p class="hint" id="eixoHint"></p>
+      </div>
+
+      <div class="field">
+        <label>Número de cores</label>
+        <div class="seg" id="nSeg" role="group">
+          <button type="button" data-n="2" aria-pressed="false">2</button>
+          <button type="button" data-n="3" aria-pressed="true">3</button>
+          <button type="button" data-n="4" aria-pressed="false">4</button>
+        </div>
+        <p class="hint">2 = primária + secundária · 3 = +1 acento · 4 = +2 acentos</p>
+      </div>
+
+      <div class="field">
+        <label>Cor primária</label>
+        <div class="swatch-row" id="primRow"></div>
+      </div>
+
+      <div class="field">
+        <label>Cor secundária</label>
+        <div class="swatch-row" id="secRow"></div>
+      </div>
+
+      <div class="field" id="accField">
+        <label>Acento <span style="font-weight:400;text-transform:none">(alto contraste)</span></label>
+        <div class="swatch-row" id="accRow"></div>
+        <p class="hint">Até <span id="accMax">1</span>. Cada acento deve manter contraste ≥ 4,5:1 com primária e secundária.</p>
+      </div>
+
+      <div class="field">
+        <label>Diagnóstico</label>
+        <div id="diagnostics"></div>
+      </div>
+    </section>
+
+    <!-- ============ PRÉVIA ============ -->
+    <section class="panel" aria-label="Prévia">
+      <h2>Prévia e exportação</h2>
+
+      <div class="preview" id="preview">
+        <div class="pv-head" id="pvHead">
+          <div class="logo">Hermathena</div>
+          <nav class="pv-nav" id="pvNav"><span>Início</span><span>Ciência</span><span>Projeto</span></nav>
+        </div>
+        <div class="pv-body" id="pvBody">
+          <div class="pv-card" id="pvCard">
+            <h3>Radiotelescópio BINGO</h3>
+            <p>Mapeamento de intensidade da linha de 21 cm no sertão paraibano.</p>
+          </div>
+          <div class="pv-actions">
+            <button class="pv-btn" id="pvBtn1">Saiba mais</button>
+            <button class="pv-btn ghost" id="pvBtn2">Documentação</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="field" style="margin-top:16px">
+        <label>Contraste verificado</label>
+        <table id="contrastTable"><tbody></tbody></table>
+      </div>
+
+      <div class="css-out">
+        <header>
+          <strong>CSS gerado</strong>
+          <button type="button" id="copyBtn">Copiar</button>
+        </header>
+        <pre id="cssOut"></pre>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script>
+"use strict";
+
+/* ------------------------------------------------------------------ *
+ * 1. Paleta BR01
+ * ------------------------------------------------------------------ */
+const PALETTE = [
+  { key:"grafite",   name:"Grafite energia escura", hex:"#2B3147", noPrimary:false },
+  { key:"profundo",  name:"Azul céu profundo",      hex:"#08268F", noPrimary:false },
+  { key:"bingoblue", name:"Azul BINGO",             hex:"#3F6CCF", noPrimary:false },
+  { key:"cyan",      name:"Electric cyan",          hex:"#22D3EE", noPrimary:true  },
+  { key:"roxo",      name:"Roxo crepúsculo",        hex:"#5A3FB2", noPrimary:true  },
+  { key:"terracota", name:"Laranja sertão / terracota", hex:"#C75A2E", noPrimary:false },
+  { key:"laranja",   name:"Laranja Uirapuru",       hex:"#F28A34", noPrimary:false },
+  { key:"branco",    name:"Branco quente",          hex:"#F7F1E8", noPrimary:false },
+  { key:"ouro",      name:"BINGO ouro",             hex:"#C9A34A", noPrimary:true  }
+];
+const byKey = Object.fromEntries(PALETTE.map(c => [c.key, c]));
+
+/* ------------------------------------------------------------------ *
+ * 2. Eixos temáticos — MAPEAMENTO PROVISÓRIO (PROPOSTA)
+ *    A BR01 registra esta atribuição como "A DECIDIR".
+ *    Editar aqui para homologar.
+ * ------------------------------------------------------------------ */
+const EIXOS = [
+  { id:"tengre",   nome:"Tengre",
+    desc:"Distâncias astronômicas, evolução estelar, pulsares, transientes de rádio e ondas gravitacionais.",
+    primaria:"profundo", secundaria:"grafite", acentos:["laranja"] },
+  { id:"nataraja", nome:"Shiva Nataraja",
+    desc:"História térmica do Universo, recombinação, matéria e energia escura e tensão de Hubble.",
+    primaria:"grafite", secundaria:"profundo", acentos:["ouro"] },
+  { id:"wukong",   nome:"Sun Wukong",
+    desc:"Espectro eletromagnético, antenas e receptores, sinais digitais, interferência e hidrogênio neutro.",
+    primaria:"profundo", secundaria:"grafite", acentos:["cyan"] },
+  { id:"tekoha",   nome:"Tekoha",
+    desc:"Editais, publicações, premiações, agenda, obra e bolsistas.",
+    primaria:"grafite", secundaria:"profundo", acentos:["laranja"] },
+  { id:"urania",   nome:"Urania",
+    desc:"Notícias internacionais, clipping de ciência e destaque do mês.",
+    primaria:"profundo", secundaria:"grafite", acentos:["ouro"] },
+  { id:"guaraci",  nome:"Guaraci",
+    desc:"Portal, templates, automação, relatórios e press releases.",
+    primaria:"grafite", secundaria:"profundo", acentos:["cyan"] }
+];
+
+/* ------------------------------------------------------------------ *
+ * 3. Utilidades de cor
+ * ------------------------------------------------------------------ */
+function lum(hex){
+  const rgb = hex.slice(1).match(/../g).map(v => parseInt(v,16)/255)
+    .map(c => c <= 0.04045 ? c/12.92 : Math.pow((c+0.055)/1.055, 2.4));
+  return 0.2126*rgb[0] + 0.7152*rgb[1] + 0.0722*rgb[2];
+}
+function contrast(a,b){
+  const A = lum(a), B = lum(b);
+  return (Math.max(A,B) + 0.05) / (Math.min(A,B) + 0.05);
+}
+
+/* ------------------------------------------------------------------ *
+ * 4. Estado
+ * ------------------------------------------------------------------ */
+const state = {
+  fundo: "claro",
+  eixo: "",
+  n: 3,
+  primaria: "profundo",
+  secundaria: "grafite",
+  acentos: ["laranja"]
+};
+
+const FUNDO = {
+  claro:  { bg: byKey.branco.hex,  texto: byKey.grafite.hex },
+  escuro: { bg: byKey.grafite.hex, texto: byKey.branco.hex  }
+};
+
+/* ------------------------------------------------------------------ *
+ * 5. Renderização dos controles
+ * ------------------------------------------------------------------ */
+const el = id => document.getElementById(id);
+
+function renderEixoSelect(){
+  const sel = el("eixo");
+  sel.innerHTML = `<option value="">— Nenhum (seleção livre) —</option>` +
+    EIXOS.map(e => `<option value="${e.id}" title="${e.desc}">${e.nome}</option>`).join("");
+  sel.value = state.eixo;
+}
+
+function swatchRow(container, role){
+  container.innerHTML = PALETTE.map(c => {
+    const active = role === "primaria" ? state.primaria === c.key
+                 : role === "secundaria" ? state.secundaria === c.key
+                 : state.acentos.includes(c.key);
+    const blocked = (role === "primaria" && c.noPrimary) ||
+                    (role === "secundaria" && c.key === state.primaria) ||
+                    (role === "primaria" && c.key === state.secundaria);
+    const cls = "swatch" + (blocked ? " blocked" : "");
+    return `<button type="button" class="${cls}" data-role="${role}" data-key="${c.key}"
+      aria-pressed="${active}" title="${c.name} ${c.hex}${c.noPrimary ? ' · não pode ser primária' : ''}"
+      style="background:${c.hex}" ${blocked ? "disabled" : ""}></button>`;
+  }).join("");
+}
+
+function renderSwatches(){
+  swatchRow(el("primRow"), "primaria");
+  swatchRow(el("secRow"), "secundaria");
+  if (state.n >= 3) swatchRow(el("accRow"), "acento");
+  el("accField").style.display = state.n >= 3 ? "" : "none";
+  el("accMax").textContent = state.n - 2;
+  el("fundoHint").textContent = state.fundo === "claro"
+    ? `Fundo claro · ${FUNDO.claro.bg} · texto ${FUNDO.claro.texto}`
+    : `Fundo escuro · ${FUNDO.escuro.bg} · texto ${FUNDO.escuro.texto}`;
+}
+
+/* ------------------------------------------------------------------ *
+ * 6. Diagnóstico
+ * ------------------------------------------------------------------ */
+function diagnostics(){
+  const msgs = [];
+  const p = byKey[state.primaria], s = byKey[state.secundaria];
+  const f = FUNDO[state.fundo];
+
+  if (p.noPrimary) msgs.push({t:"warn", m:`${p.name} não pode ser cor primária.`});
+  if (p.key === s.key) msgs.push({t:"warn", m:"Primária e secundária não podem coincidir."});
+
+  const ct = contrast(f.bg, f.texto);
+  msgs.push({t: ct >= 4.5 ? "ok" : "warn", m:`Contraste fundo × texto = ${ct.toFixed(2)}:1.`});
+
+  state.acentos.forEach((k,i) => {
+    const a = byKey[k];
+    const cp = contrast(a.hex, p.hex), csec = contrast(a.hex, s.hex);
+    const ok = cp >= 4.5 && csec >= 4.5;
+    msgs.push({t: ok ? "ok" : "warn",
+      m:`Acento ${i+1} (${a.name}) × primária ${cp.toFixed(2)}:1 · × secundária ${csec.toFixed(2)}:1.`});
+  });
+
+  if (!msgs.length) msgs.push({t:"ok", m:"Combinação dentro das diretrizes."});
+  return msgs;
+}
+
+function renderDiagnostics(){
+  el("diagnostics").innerHTML = diagnostics()
+    .map(d => `<div class="note ${d.t}" style="margin-bottom:6px">${d.m}</div>`).join("");
+}
+
+/* ------------------------------------------------------------------ *
+ * 7. Prévia
+ * ------------------------------------------------------------------ */
+function renderPreview(){
+  const p = byKey[state.primaria], s = byKey[state.secundaria];
+  const f = FUNDO[state.fundo];
+  const a1 = state.acentos[0] ? byKey[state.acentos[0]] : p;
+
+  const head = el("pvHead");
+  head.style.background = p.hex;
+  head.style.color = textOn(p.hex, s.hex);
+  head.querySelector(".pv-nav").style.color = "inherit";
+
+  const body = el("pvBody");
+  body.style.background = f.bg;
+  body.style.color = f.texto;
+
+  const card = el("pvCard");
+  card.style.background = s.hex;
+  card.style.color = textOn(s.hex, f.bg);
+  card.style.borderLeft = `5px solid ${a1.hex}`;
+
+  const b1 = el("pvBtn1");
+  b1.style.background = a1.hex;
+  b1.style.color = textOn(a1.hex, f.texto);
+
+  const b2 = el("pvBtn2");
+  b2.style.color = a1.hex;
+  b2.style.borderColor = a1.hex;
+}
+
+function textOn(bgHex, fallbackHex){
+  const w = contrast(bgHex, byKey.branco.hex);
+  const g = contrast(bgHex, byKey.grafite.hex);
+  return w >= g ? byKey.branco.hex : byKey.grafite.hex;
+}
+
+/* ------------------------------------------------------------------ *
+ * 8. Exportação de CSS
+ * ------------------------------------------------------------------ */
+function buildCSS(){
+  const p = byKey[state.primaria], s = byKey[state.secundaria];
+  const f = FUNDO[state.fundo];
+  const a = state.acentos.map(k => byKey[k]);
+
+  const role = a.map((c,i) => `  --acento-${i+1}: ${c.hex};`).join("\n");
+  return `/* Projeto Hermathena — esquema cromático
+   fundo: ${state.fundo}${state.eixo ? " · eixo: " + EIXOS.find(e=>e.id===state.eixo).nome : ""}
+   Gerado pelo Visual Lab. Ciano, roxo e ouro não são cores primárias. */
+
+:root {
+  --fundo: ${f.bg};
+  --texto: ${f.texto};
+  --primaria: ${p.hex};
+  --secundaria: ${s.hex};
+${role}
+
+  --fonte-titulo: "Outfit", sans-serif;
+  --fonte-corpo: "Inter", sans-serif;
+}
+
+body {
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: var(--fonte-corpo);
+}
+
+.cabecalho { background: var(--primaria); color: var(--texto); }
+.cartao { background: var(--secundaria); border-left: 5px solid var(--acento-1); }
+.botao { background: var(--acento-1); border: 0; }
+h1, h2, h3, .display { font-family: var(--fonte-titulo); }
+`;
+}
+
+function renderCSS(){
+  el("cssOut").textContent = buildCSS();
+}
+
+/* ------------------------------------------------------------------ *
+ * 9. Interação
+ * ------------------------------------------------------------------ */
+function applyEixo(id){
+  const e = EIXOS.find(x => x.id === id);
+  if (!e) return;
+  state.primaria = e.primaria;
+  state.secundaria = e.secundaria;
+  const maxAcc = state.n - 2;
+  state.acentos = e.acentos.slice(0, maxAcc);
+}
+
+function syncToggles(){
+  document.querySelectorAll("#fundoSeg button").forEach(b =>
+    b.setAttribute("aria-pressed", String(b.dataset.fundo === state.fundo)));
+  document.querySelectorAll("#nSeg button").forEach(b =>
+    b.setAttribute("aria-pressed", String(Number(b.dataset.n) === state.n)));
+}
+
+function renderAll(){
+  renderSwatches();
+  renderDiagnostics();
+  renderPreview();
+  renderCSS();
+  syncToggles();
+}
+
+document.addEventListener("click", ev => {
+  const btn = ev.target.closest("button");
+  if (!btn) return;
+
+  if (btn.dataset.fundo){
+    state.fundo = btn.dataset.fundo; renderAll(); return;
+  }
+  if (btn.dataset.n){
+    state.n = Number(btn.dataset.n);
+    const maxAcc = state.n - 2;
+    state.acentos = state.acentos.slice(0, maxAcc);
+    while (state.acentos.length < maxAcc) {
+      const cand = PALETTE.find(c => c.key !== state.primaria && c.key !== state.secundaria
+        && !state.acentos.includes(c.key) && contrast(c.hex, byKey[state.primaria].hex) >= 4.5
+        && contrast(c.hex, byKey[state.secundaria].hex) >= 4.5);
+      state.acentos.push(cand ? cand.key : state.primaria);
+    }
+    renderAll(); return;
+  }
+  const role = btn.dataset.role, key = btn.dataset.key;
+  if (!role || !key) return;
+
+  if (role === "primaria"){ state.primaria = key; if (state.secundaria === key) state.secundaria = state.primaria === "grafite" ? "branco" : "grafite"; }
+  if (role === "secundaria"){ state.secundaria = key; }
+  if (role === "acento"){
+    if (state.acentos.includes(key)) state.acentos = state.acentos.filter(k => k !== key);
+    else if (state.acentos.length < state.n - 2) state.acentos.push(key);
+    else state.acentos = [...state.acentos.slice(1), key];
+  }
+  renderAll();
+});
+
+el("eixo").addEventListener("change", ev => {
+  state.eixo = ev.target.value;
+  el("eixoHint").textContent = state.eixo ? EIXOS.find(e => e.id === state.eixo).desc : "";
+  if (state.eixo) applyEixo(state.eixo);
+  renderAll();
+});
+
+el("copyBtn").addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText(buildCSS());
+    el("copyBtn").textContent = "Copiado";
+  } catch { el("copyBtn").textContent = "Falha"; }
+  setTimeout(() => el("copyBtn").textContent = "Copiar", 1600);
+});
+
+/* ------------------------------------------------------------------ *
+ * 10. Inicialização
+ * ------------------------------------------------------------------ */
+renderEixoSelect();
+renderAll();
+</script>
+</body>
+</html>

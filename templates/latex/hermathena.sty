@@ -1,0 +1,55 @@
+% =====================================================================
+%  hermathena.sty — Identidade visual do Projeto Hermathena / BINGO
+%  Requer LuaLaTeX ou XeLaTeX (usa fontspec).
+%  Centraliza paleta, tipografia (Outfit/Inter) e elementos de marca.
+% =====================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{hermathena}[2026/10/09 v0.1 Identidade visual Hermathena]
+
+\RequirePackage{xcolor}
+\RequirePackage{graphicx}
+\RequirePackage{fontspec}
+
+% ---------------------------------------------------------------------
+% 1. Paleta (BR01)
+% ---------------------------------------------------------------------
+\definecolor{hermaGrafite}{HTML}{2B3147}
+\definecolor{hermaAzulProfundo}{HTML}{08268F}
+\definecolor{hermaAzulBingo}{HTML}{3F6CCF}
+\definecolor{hermaCyan}{HTML}{22D3EE}
+\definecolor{hermaRoxo}{HTML}{5A3FB2}
+\definecolor{hermaTerracota}{HTML}{C75A2E}
+\definecolor{hermaLaranja}{HTML}{F28A34}
+\definecolor{hermaBranco}{HTML}{F7F1E8}
+\definecolor{hermaOuro}{HTML}{C9A34A}
+
+% ---------------------------------------------------------------------
+% 2. Tipografia
+%    Outfit  — títulos, chamadas e métricas
+%    Inter   — corpo, tabelas, legendas e interface
+%    Fallback para Latin Modern caso as fontes não estejam instaladas.
+% ---------------------------------------------------------------------
+\IfFontExistsTF{Inter}{\setmainfont{Inter}}{\RequirePackage{lmodern}}
+\IfFontExistsTF{Outfit}{\newfontfamily\hermaDisplay{Outfit}}{\newcommand{\hermaDisplay}{}}
+
+% Utilidades tipográficas
+\newcommand{\hermaTitle}[1]{{\hermaDisplay\color{hermaGrafite}\fontsize{22}{26}\selectfont\bfseries #1}}
+\newcommand{\hermaSubtitle}[1]{{\hermaDisplay\color{hermaAzulBingo}\fontsize{14}{18}\selectfont #1}}
+
+% ---------------------------------------------------------------------
+% 3. Logotipo (opcional)
+%    Coloque bingo_logo.png ao lado do arquivo .tex (ou defina
+%    \graphicspath). O comando é inerte se o arquivo não existir.
+% ---------------------------------------------------------------------
+\newcommand{\hermathenaLogo}[1][3cm]{%
+  \IfFileExists{bingo_logo.png}%
+    {\includegraphics[width=#1]{bingo_logo.png}}%
+    {\null}%
+}
+
+% ---------------------------------------------------------------------
+% 4. Filete de marca
+% ---------------------------------------------------------------------
+\newcommand{\hermaRule}[1][\linewidth]{\noindent{\color{hermaLaranja}\rule{#1}{1.2pt}}}
+
+\endinput

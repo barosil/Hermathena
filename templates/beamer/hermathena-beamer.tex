@@ -1,0 +1,85 @@
+% =====================================================================
+%  Apresentação (Beamer) — Projeto Hermathena / BINGO
+%  Compilar com LuaLaTeX ou XeLaTeX (Overleaf: Menu > Compiler).
+%  Mantenha hermathena.sty no mesmo diretório.
+% =====================================================================
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage{hermathena}
+\usetheme{default}
+\usefonttheme{professionalfonts}
+\setbeamertemplate{navigation symbols}{}
+
+% --- Paleta aplicada ao Beamer --------------------------------------
+\setbeamercolor{normal text}{fg=hermaGrafite}
+\setbeamercolor{frametitle}{fg=hermaGrafite,bg=hermaBranco}
+\setbeamercolor{title}{fg=hermaGrafite}
+\setbeamercolor{subtitle}{fg=hermaAzulBingo}
+\setbeamercolor{structure}{fg=hermaAzulBingo}
+\setbeamercolor{itemize item}{fg=hermaAzulBingo}
+\setbeamercolor{itemize subitem}{fg=hermaLaranja}
+\setbeamercolor{block title}{fg=white,bg=hermaAzulProfundo}
+\setbeamercolor{block body}{fg=hermaGrafite,bg=hermaBranco}
+
+% --- Fundo e filete ------------------------------------------------
+\setbeamercolor{background canvas}{bg=white}
+\setbeamertemplate{frametitle}{%
+  \vspace{6pt}%
+  \usebeamerfont{frametitle}\insertframetitle\par%
+  \vspace{-2pt}{\color{hermaLaranja}\rule{\linewidth}{1pt}}%
+}
+
+% --- Rodapé --------------------------------------------------------
+\setbeamertemplate{footline}{%
+  \hspace{1em}{\scriptsize\color{hermaGrafite} Projeto Hermathena · BINGO}%
+  \hfill{\scriptsize\color{hermaGrafite}\insertframenumber}\hspace{1em}\vspace{4pt}%
+}
+
+\title{Projeto Hermathena}
+\subtitle{Comunicação Multimídia do Radiotelescópio BINGO}
+\author{Luciano Barosi}
+\date{9 de outubro de 2026}
+
+\begin{document}
+
+% --- Capa ----------------------------------------------------------
+\begin{frame}[plain]
+  \vfill
+  \begin{center}
+    \hermathenaLogo[3cm]\par\vspace{10pt}
+    {\hermaDisplay\color{hermaGrafite}\Huge\bfseries \inserttitle}\par\vspace{4pt}
+    {\hermaDisplay\color{hermaAzulBingo}\large \insertsubtitle}\par\vspace{14pt}
+    \hermaRule[0.6\linewidth]\par\vspace{8pt}
+    {\color{hermaGrafite}\insertauthor\ · \insertdate}
+  \end{center}
+  \vfill
+\end{frame}
+
+% --- Seção ---------------------------------------------------------
+\section{Fundamentos}
+\begin{frame}{Uma jornada de transformação humana nas asas da ciência}
+  \begin{itemize}
+    \item Aproximar ciência e sociedade.
+    \item Transformar conhecimento em oportunidade.
+    \item Interiorizar a ciência no sertão paraibano.
+  \end{itemize}
+  \vspace{8pt}
+  \begin{block}{Princípio}
+    Comunicar ciência de fronteira com sóbria formalidade e rigor científico.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Núcleos do projeto}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \textbf{Magellan} — infraestrutura digital\\
+      \textbf{Triangulum} — produção de conteúdo
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \textbf{Via Láctea} — educação\\
+      \textbf{Andromeda} — engajamento
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\end{document}

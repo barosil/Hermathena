@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Uirapuru híbrida — matriz por fundo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --grafite:#2B3147;
+  --azul-profundo:#08268F;
+  --azul-bingo:#3F6CCF;
+  --cyan:#22D3EE;
+  --roxo:#5A3FB2;
+  --terracota:#C75A2E;
+  --laranja:#F28A34;
+  --branco:#F7F1E8;
+  --ouro:#C9A34A;
+}
+*{box-sizing:border-box}
+html{background:var(--branco);scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--branco);
+  color:var(--grafite);
+  font-family:"Inter";
+  line-height:1.4;
+}
+h1,h2,h3,.display,.matrix-title,.bg-number,.big{font-family:"Outfit"}
+a{color:inherit}
+.wrap{max-width:1900px;margin:0 auto;padding:28px 22px 80px}
+.hero{padding:8px 0 20px}
+.eyebrow{
+  font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase
+}
+h1{
+  margin:8px 0 12px;
+  max-width:1200px;
+  font-size:clamp(38px,5vw,68px);
+  line-height:.98;
+  letter-spacing:-.035em
+}
+.hero p{max-width:1180px;margin:0;font-size:15px}
+.status{
+  display:inline-block;margin-top:14px;padding:7px 11px;
+  border-radius:999px;background:var(--grafite);color:var(--branco);
+  font-size:11px;font-weight:700
+}
+
+.palette-strip{
+  display:grid;grid-template-columns:repeat(9,minmax(0,1fr));
+  gap:7px;margin:18px 0 26px
+}
+.palette-item{
+  background:var(--branco);color:var(--grafite);
+  border:2px solid var(--grafite);border-radius:12px;overflow:hidden
+}
+.palette-color{height:42px}
+.palette-meta{padding:7px 8px;font-size:10px}
+.palette-name{font-family:"Outfit";font-weight:600;line-height:1.08}
+.palette-hex{margin-top:3px}
+
+.summary{
+  display:grid;grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:8px;margin:0 0 24px
+}
+.summary-card{
+  padding:13px 14px;border:2px solid var(--grafite);border-radius:14px;
+  background:var(--branco);color:var(--grafite)
+}
+.summary-card.inverse{background:var(--grafite);color:var(--branco)}
+.big{font-size:30px;font-weight:700;line-height:1}
+.caption{font-size:10px;margin-top:6px}
+
+.instructions{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 26px
+}
+.info{
+  border:2px solid var(--grafite);border-radius:16px;padding:15px;
+  background:var(--branco);color:var(--grafite)
+}
+.info.inverse{background:var(--grafite);color:var(--branco)}
+.info h3{margin:0 0 7px;font-size:18px}
+.info p,.info li{font-size:12px}
+.info ul{margin:0;padding-left:19px}
+.info li{margin:4px 0}
+
+.legend{
+  display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 18px;
+  padding:11px 12px;background:var(--branco);border:2px solid var(--grafite);
+  border-radius:14px;font-size:11px
+}
+.badge{
+  display:inline-block;padding:4px 7px;border-radius:999px;
+  background:var(--grafite);color:var(--branco);
+  font-size:9px;font-weight:700;letter-spacing:.02em
+}
+.badge.light{background:var(--branco);color:var(--grafite);border:2px solid var(--grafite)}
+
+.index{
+  display:flex;flex-wrap:wrap;gap:7px;margin:0 0 22px
+}
+.index a{
+  text-decoration:none;padding:6px 9px;border-radius:999px;
+  background:var(--grafite);color:var(--branco);font-size:10px;font-weight:700
+}
+
+.bg-section{
+  margin:0 0 30px;
+  background:var(--branco);
+  border-top:4px solid var(--grafite);
+  padding-top:14px
+}
+.bg-head{
+  display:flex;justify-content:space-between;gap:18px;align-items:flex-start;
+  margin-bottom:12px
+}
+.bg-number{font-size:12px;font-weight:700}
+.matrix-title{font-size:30px;font-weight:600;line-height:1.02}
+.bg-head p{max-width:650px;margin:0;font-size:11px}
+
+.matrix-shell{
+  overflow-x:auto;background:var(--branco)
+}
+.matrix{
+  min-width:1120px;
+  display:grid;
+  grid-template-columns:190px repeat(9,minmax(92px,1fr));
+  gap:5px;
+  align-items:stretch
+}
+.corner,.col-head,.row-head{
+  background:var(--grafite);color:var(--branco);
+  padding:8px;border-radius:9px;font-size:9px
+}
+.corner{display:flex;align-items:flex-end;font-weight:700}
+.col-head{min-height:66px}
+.col-head strong,.row-head strong{display:block;font-family:"Outfit";font-size:11px;line-height:1.08}
+.col-head span,.row-head span{display:block;margin-top:4px}
+.row-head{display:flex;flex-direction:column;justify-content:center}
+.sample{
+  min-height:82px;
+  border-radius:9px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between
+}
+.sample-demo{
+  min-height:58px;padding:8px;
+  display:flex;align-items:center;justify-content:space-between;gap:5px
+}
+.aa{font-family:"Outfit";font-size:22px;font-weight:600;line-height:1}
+.signal{width:26px;height:6px;border-radius:999px;flex:0 0 auto}
+.sample-note{
+  min-height:24px;
+  padding:4px 6px;
+  background:var(--branco);color:var(--grafite);
+  font-size:8px;font-weight:700;
+  display:flex;align-items:center;gap:4px;flex-wrap:wrap
+}
+.sample-note.blank{font-weight:400}
+.omitted{
+  min-height:82px;border-radius:9px;
+  background:var(--grafite);color:var(--branco);
+  display:flex;align-items:center;justify-content:center;
+  padding:8px;text-align:center;font-size:9px;font-weight:700
+}
+
+.audit{
+  margin-top:34px;border-top:4px solid var(--grafite);padding-top:14px
+}
+.audit h2{font-size:28px;margin:0 0 8px}
+.audit p{font-size:12px;max-width:900px}
+.audit-table-wrap{overflow:auto}
+table{width:100%;border-collapse:collapse;background:var(--branco);color:var(--grafite)}
+th,td{padding:8px 9px;border-bottom:2px solid var(--grafite);text-align:left;font-size:10px}
+th{background:var(--grafite);color:var(--branco);font-family:"Outfit"}
+
+.footer{
+  margin-top:26px;padding:14px;border-radius:14px;
+  background:var(--grafite);color:var(--branco);font-size:11px
+}
+
+@media(max-width:1200px){
+  .summary{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .palette-strip{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:760px){
+  .summary,.instructions,.palette-strip{grid-template-columns:1fr}
+  .wrap{padding:14px 10px 55px}
+  .bg-head{display:block}
+  .bg-head p{margin-top:7px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="eyebrow">BINGO · estudo cromático</div>
+  <h1>Uirapuru híbrida — matriz de combinações por fundo</h1>
+  <p>
+    O primeiro critério é a cor de fundo. Fundo, texto e sinal seguem sempre a mesma ordem da paleta Uirapuru híbrida.
+    Nesta versão, somente fundo = texto é omitido. Combinações de baixo contraste permanecem visíveis e as 24 combinações
+    que receberam X no print de curadoria permanecem no mapa como observação, sem serem eliminadas.
+  </p>
+  <div class="status">MATRIZ DE INSPEÇÃO · NÃO É REGRA APROVADA DA MARCA</div>
+</header>
+
+<section>
+  <div class="palette-strip" id="paletteStrip"></div>
+</section>
+
+<section class="summary">
+  <div class="summary-card inverse"><div class="big">729</div><div class="caption">trios teóricos<br>9 × 9 × 9</div></div>
+  <div class="summary-card"><div class="big">81</div><div class="caption">omitidos<br>fundo = texto</div></div>
+  <div class="summary-card inverse"><div class="big">648</div><div class="caption">células exibidas<br>8 textos × 9 sinais × 9 fundos</div></div>
+  <div class="summary-card"><div class="big">54</div><div class="caption">pares fundo/texto<br>abaixo de 4,5:1</div></div>
+  <div class="summary-card inverse"><div class="big">486</div><div class="caption">células com nota<br>de baixo contraste</div></div>
+  <div class="summary-card"><div class="big">24</div><div class="caption">trios exatos<br>marcados com X</div></div>
+</section>
+
+<section class="instructions">
+  <div class="info">
+    <h3>Como a matriz está ordenada</h3>
+    <ul>
+      <li>1º: fundo, na ordem da paleta.</li>
+      <li>2º: texto, na ordem da paleta.</li>
+      <li>3º: sinal/acento, nas colunas, na ordem da paleta.</li>
+      <li>Quando fundo = texto, a linha é omitida.</li>
+    </ul>
+  </div>
+  <div class="info inverse">
+    <h3>Como ler as observações</h3>
+    <ul>
+      <li><strong>BC</strong> = contraste fundo/texto abaixo de 4,5:1.</li>
+      <li><strong>X</strong> = trio exato marcado pela usuária no print anterior.</li>
+      <li>X não é recriado por aproximação: aparece somente nos 24 trios transcritos do print.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="legend">
+  <span class="badge">BC</span><span>baixo contraste fundo/texto</span>
+  <span class="badge">X</span><span>observação visual da curadoria</span>
+  <span class="badge light">sem marca</span><span>nenhuma dessas duas observações</span>
+</div>
+
+<nav class="index" id="index"></nav>
+
+<main id="sections"></main>
+
+<section class="audit">
+  <h2>Auditoria dos 24 X</h2>
+  <p>
+    Lista dos trios que esta versão marca com X. Ela foi reconstruída a partir do print original para que a anotação
+    não seja confundida com uma rejeição automática do par fundo/texto.
+  </p>
+  <div class="audit-table-wrap">
+    <table>
+      <thead>
+        <tr><th>#</th><th>Fundo</th><th>Texto</th><th>Sinal/acento</th><th>Contraste fundo/texto</th></tr>
+      </thead>
+      <tbody id="auditBody"></tbody>
+    </table>
+  </div>
+</section>
+
+<div class="footer">
+  A apresentação usa apenas Branco quente e Grafite energia escura. As demais sete cores aparecem somente nas amostras,
+  porque são o objeto da análise cromática. Os boxes de demonstração não usam filetes de contorno.
+</div>
+
+</div>
+
+<script>
+const palette = [{"name": "Grafite energia escura", "hex": "#2B3147", "idx": 1}, {"name": "Azul céu profundo", "hex": "#08268F", "idx": 2}, {"name": "Azul BINGO", "hex": "#3F6CCF", "idx": 3}, {"name": "Electric cyan", "hex": "#22D3EE", "idx": 4}, {"name": "Roxo crepúsculo", "hex": "#5A3FB2", "idx": 5}, {"name": "Laranja sertão / terracota", "hex": "#C75A2E", "idx": 6}, {"name": "Laranja Uirapuru", "hex": "#F28A34", "idx": 7}, {"name": "Branco quente", "hex": "#F7F1E8", "idx": 8}, {"name": "BINGO ouro", "hex": "#C9A34A", "idx": 9}];
+const xTriples = [["Grafite energia escura", "Roxo crepúsculo", "Branco quente"], ["Grafite energia escura", "Azul céu profundo", "Branco quente"], ["Azul céu profundo", "Azul BINGO", "Branco quente"], ["Azul céu profundo", "Roxo crepúsculo", "Branco quente"], ["Azul céu profundo", "Grafite energia escura", "Branco quente"], ["Azul BINGO", "BINGO ouro", "Grafite energia escura"], ["Azul BINGO", "Roxo crepúsculo", "Branco quente"], ["Azul BINGO", "Laranja sertão / terracota", "Branco quente"], ["Roxo crepúsculo", "Laranja sertão / terracota", "Branco quente"], ["Roxo crepúsculo", "Azul céu profundo", "Branco quente"], ["Roxo crepúsculo", "Azul BINGO", "Branco quente"], ["Laranja sertão / terracota", "Electric cyan", "Grafite energia escura"], ["Laranja sertão / terracota", "BINGO ouro", "Grafite energia escura"], ["Laranja sertão / terracota", "Roxo crepúsculo", "Branco quente"], ["Laranja sertão / terracota", "Laranja Uirapuru", "Grafite energia escura"], ["Laranja sertão / terracota", "Azul BINGO", "Branco quente"], ["Laranja Uirapuru", "Azul BINGO", "Grafite energia escura"], ["Laranja Uirapuru", "Electric cyan", "Grafite energia escura"], ["Laranja Uirapuru", "BINGO ouro", "Grafite energia escura"], ["BINGO ouro", "Roxo crepúsculo", "Branco quente"], ["BINGO ouro", "Azul BINGO", "Grafite energia escura"], ["BINGO ouro", "Laranja sertão / terracota", "Grafite energia escura"], ["BINGO ouro", "Electric cyan", "Grafite energia escura"], ["BINGO ouro", "Laranja Uirapuru", "Grafite energia escura"]];
+const xSet = new Set(xTriples.map(t => t.join("|")));
+
+function lum(hex){
+  const rgb=hex.slice(1).match(/../g).map(v=>parseInt(v,16)/255)
+    .map(c=>c<=0.04045?c/12.92:Math.pow((c+0.055)/1.055,2.4));
+  return 0.2126*rgb[0]+0.7152*rgb[1]+0.0722*rgb[2];
+}
+function contrast(a,b){
+  const A=lum(a),B=lum(b);
+  return (Math.max(A,B)+0.05)/(Math.min(A,B)+0.05);
+}
+
+const byName=Object.fromEntries(palette.map(c=>[c.name,c]));
+
+document.getElementById("paletteStrip").innerHTML=palette.map(c=>`
+  <div class="palette-item">
+    <div class="palette-color" style="background:${c.hex}"></div>
+    <div class="palette-meta">
+      <div class="palette-name">${c.idx}. ${c.name}</div>
+      <div class="palette-hex">${c.hex}</div>
+    </div>
+  </div>
+`).join("");
+
+document.getElementById("index").innerHTML=palette.map(c=>`
+  <a href="#fundo-${c.idx}">${c.idx} · ${c.name}</a>
+`).join("");
+
+const sections=document.getElementById("sections");
+
+palette.forEach(bg=>{
+  const texts=palette.filter(tx=>tx.name!==bg.name);
+
+  const headerCells=palette.map(ac=>`
+    <div class="col-head">
+      <strong>${ac.idx} · ${ac.name}</strong>
+      <span>${ac.hex}</span>
+    </div>
+  `).join("");
+
+  let matrixRows="";
+  texts.forEach(tx=>{
+    const ratio=contrast(bg.hex,tx.hex);
+    const low=ratio<4.5;
+
+    matrixRows += `
+      <div class="row-head">
+        <strong>${tx.idx} · ${tx.name}</strong>
+        <span>${tx.hex} · ${ratio.toFixed(2)}:1</span>
+      </div>
+    `;
+
+    palette.forEach(ac=>{
+      const key=[bg.name,tx.name,ac.name].join("|");
+      const isX=xSet.has(key);
+
+      let note="";
+      if(isX && low) note=`<span class="badge">X</span><span class="badge">BC</span>`;
+      else if(isX) note=`<span class="badge">X</span>`;
+      else if(low) note=`<span class="badge">BC</span>`;
+      else note=`<span class="sample-note blank">sem observação</span>`;
+
+      matrixRows += `
+        <div class="sample" title="Fundo: ${bg.name} | Texto: ${tx.name} | Sinal: ${ac.name}">
+          <div class="sample-demo" style="background:${bg.hex};color:${tx.hex}">
+            <span class="aa">Aa</span>
+            <span class="signal" style="background:${ac.hex}"></span>
+          </div>
+          <div class="sample-note">${note}</div>
+        </div>
+      `;
+    });
+  });
+
+  sections.insertAdjacentHTML("beforeend",`
+    <section class="bg-section" id="fundo-${bg.idx}">
+      <div class="bg-head">
+        <div>
+          <div class="bg-number">FUNDO ${bg.idx} / 9</div>
+          <div class="matrix-title">${bg.name} · ${bg.hex}</div>
+        </div>
+        <p>
+          8 cores de texto × 9 sinais = 72 combinações.
+          Texto e sinal seguem a ordem literal da paleta; não há reordenação por contraste.
+        </p>
+      </div>
+      <div class="matrix-shell">
+        <div class="matrix">
+          <div class="corner">TEXTO ↓ · SINAL →</div>
+          ${headerCells}
+          ${matrixRows}
+        </div>
+      </div>
+    </section>
+  `);
+});
+
+document.getElementById("auditBody").innerHTML=xTriples.map((t,i)=>{
+  const bg=byName[t[0]],tx=byName[t[1]];
+  return `<tr>
+    <td>${i+1}</td>
+    <td>${t[0]}</td>
+    <td>${t[1]}</td>
+    <td>${t[2]}</td>
+    <td>${contrast(bg.hex,tx.hex).toFixed(2)}:1</td>
+  </tr>`;
+}).join("");
+</script>
+</body>
+</html>

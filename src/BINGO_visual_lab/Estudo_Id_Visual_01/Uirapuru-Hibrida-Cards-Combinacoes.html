@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Uirapuru híbrida — combinações</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f6fb;--ink:#172033;--muted:#687086;--line:#d9deea}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif}
+.wrap{max-width:1500px;margin:auto;padding:28px}
+h1,h2{font-family:Outfit,Arial,sans-serif}
+.hero{padding:34px;border-radius:24px;background:linear-gradient(135deg,#08268F,#5A3FB2,#C75A2E);color:white}
+.hero h1{font-size:54px;margin:0 0 10px}.hero p{max-width:980px;margin:0}
+.controls{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0;padding:16px;background:white;border:1px solid var(--line);border-radius:18px}
+label{font-size:12px;font-weight:600;color:var(--muted)} select{width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;background:#fff}
+.stats{margin:12px 0 18px;font-size:13px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{min-height:270px;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 8px 24px rgba(0,0,0,.06)}
+.inner{padding:22px}.k{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.t{font-family:Outfit;font-size:29px;font-weight:600;line-height:1.05;margin:10px 0}.b{font-size:14px;max-width:520px}
+.accent{width:120px;height:6px;border-radius:99px;margin-top:18px}.meta{padding:12px 14px;background:rgba(255,255,255,.88);color:#172033;font-size:12px;border-top:1px solid rgba(0,0,0,.08)}
+.palette{display:grid;grid-template-columns:repeat(9,1fr);gap:10px;margin-top:18px}.sw{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}.c{height:72px}.m{padding:8px}.n{font-family:Outfit;font-size:13px;font-weight:600}.x{font-size:11px;color:var(--muted)}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(2,1fr)}.controls{grid-template-columns:repeat(2,1fr)}.palette{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.grid,.controls,.palette{grid-template-columns:1fr}.wrap{padding:14px}.hero h1{font-size:38px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<section class="hero">
+<h1>Uirapuru híbrida — combinações cromáticas</h1>
+<p>Cards gerados com todas as combinações possíveis entre fundo e texto, excluindo a mesma cor e, por padrão, pares com contraste abaixo de 4,5:1. O acento é sugerido automaticamente dentre as demais cores da paleta.</p>
+</section>
+
+<h2>Paleta</h2>
+<div class="palette" id="palette"></div>
+
+<div class="controls">
+<div><label>Fundo</label><select id="bg"></select></div>
+<div><label>Texto</label><select id="tx"></select></div>
+<div><label>Acento</label><select id="ac"></select></div>
+<div><label>Contraste mínimo</label><select id="cr">
+<option value="0">Todos, exceto mesma cor</option>
+<option value="3">≥ 3,0</option>
+<option value="4.5" selected>≥ 4,5 — AA texto normal</option>
+<option value="7">≥ 7,0 — AAA texto normal</option>
+</select></div>
+</div>
+
+<div class="stats" id="stats"></div>
+<div class="grid" id="grid"></div>
+</div>
+
+<script>
+const P=[
+["Grafite energia escura","#2B3147"],
+["Azul céu profundo","#08268F"],
+["Azul BINGO","#3F6CCF"],
+["Electric cyan","#22D3EE"],
+["Roxo crepúsculo","#5A3FB2"],
+["Laranja sertão / terracota","#C75A2E"],
+["Laranja Uirapuru","#F28A34"],
+["Branco quente","#F7F1E8"],
+["BINGO ouro","#C9A34A"]
+].map(([name,hex])=>({name,hex}));
+
+const pal=document.getElementById("palette");
+P.forEach(c=>pal.insertAdjacentHTML("beforeend",`<div class="sw"><div class="c" style="background:${c.hex}"></div><div class="m"><div class="n">${c.name}</div><div class="x">${c.hex}</div></div></div>`));
+
+function sel(id){
+ const s=document.getElementById(id);
+ s.innerHTML='<option value="*">Todas</option>';
+ P.forEach(c=>s.insertAdjacentHTML("beforeend",`<option value="${c.hex}">${c.name}</option>`));
+}
+sel("bg");sel("tx");sel("ac");
+
+function lum(hex){
+ const a=hex.slice(1).match(/../g).map(v=>parseInt(v,16)/255).map(c=>c<=.03928?c/12.92:Math.pow((c+.055)/1.055,2.4));
+ return .2126*a[0]+.7152*a[1]+.0722*a[2];
+}
+function ratio(a,b){let x=lum(a),y=lum(b);let hi=Math.max(x,y),lo=Math.min(x,y);return (hi+.05)/(lo+.05)}
+function grade(r){return r>=7?"AAA":r>=4.5?"AA":r>=3?"AA grande":"baixo"}
+function bestAccent(bg,tx){
+ return P.filter(c=>c.hex!==bg&&c.hex!==tx)
+ .map(c=>({...c,score:Math.min(ratio(bg,c.hex),ratio(tx,c.hex))}))
+ .sort((a,b)=>b.score-a.score)[0];
+}
+const C=[];
+P.forEach(bg=>P.forEach(tx=>{
+ if(bg.hex===tx.hex)return;
+ const r=ratio(bg.hex,tx.hex), a=bestAccent(bg.hex,tx.hex);
+ C.push({bg,tx,a,r});
+}));
+
+function render(){
+ const bf=document.getElementById("bg").value;
+ const tf=document.getElementById("tx").value;
+ const af=document.getElementById("ac").value;
+ const min=parseFloat(document.getElementById("cr").value);
+ const list=C.filter(c=>(bf==="*"||c.bg.hex===bf)&&(tf==="*"||c.tx.hex===tf)&&(af==="*"||c.a.hex===af)&&c.r>=min)
+ .sort((a,b)=>b.r-a.r);
+ document.getElementById("stats").innerHTML=`<strong>${list.length}</strong> combinações exibidas de <strong>${C.length}</strong> pares possíveis com cores diferentes.`;
+ const g=document.getElementById("grid"); g.innerHTML="";
+ list.forEach(c=>{
+  g.insertAdjacentHTML("beforeend",`
+   <article class="card" style="background:${c.bg.hex};color:${c.tx.hex}">
+    <div class="inner">
+      <div class="k" style="color:${c.a.hex}">Uirapuru híbrida</div>
+      <div class="t">Radiotelescópio BINGO</div>
+      <div class="b">Fundo <strong>${c.bg.name}</strong>, texto <strong>${c.tx.name}</strong> e acento sugerido <strong>${c.a.name}</strong>. Título em Outfit e corpo em Inter.</div>
+      <div class="accent" style="background:${c.a.hex}"></div>
+    </div>
+    <div class="meta"><strong>Contraste:</strong> ${c.r.toFixed(2)}:1 · ${grade(c.r)}<br>
+    Fundo ${c.bg.hex} · Texto ${c.tx.hex} · Acento ${c.a.hex}</div>
+   </article>`);
+ });
+}
+["bg","tx","ac","cr"].forEach(id=>document.getElementById(id).addEventListener("change",render));
+render();
+</script>
+</body>
+</html>

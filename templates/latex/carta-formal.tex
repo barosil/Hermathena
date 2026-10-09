@@ -1,0 +1,85 @@
+% =====================================================================
+%  Carta formal — Projeto Hermathena / BINGO
+%  Compilar com LuaLaTeX ou XeLaTeX (Overleaf: Menu > Compiler).
+%  Mantenha hermathena.sty no mesmo diretório.
+% =====================================================================
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=3cm,right=2.5cm,top=3cm,bottom=3cm]{geometry}
+\usepackage{hermathena}
+\usepackage{setspace}
+\usepackage{parskip}
+
+\onehalfspacing
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% ---------------------------------------------------------------------
+%  Dados da carta — edite aqui
+% ---------------------------------------------------------------------
+\newcommand{\cartaRemetente}{Projeto Hermathena — Comunicação Multimídia do Radiotelescópio BINGO}
+\newcommand{\cartaRemetenteDetalhe}{Universidade Federal de Campina Grande (UFCG)}
+\newcommand{\cartaLocalData}{Campina Grande, 9 de outubro de 2026}
+\newcommand{\cartaDestinatario}{À Direção do Instituto de Pesquisa Parceiro}
+\newcommand{\cartaDestinatarioDetalhe}{Avenida Exemplo, 1000 — Cidade/UF}
+\newcommand{\cartaAssunto}{Proposta de cooperação institucional}
+\newcommand{\cartaSignatario}{Luciano Barosi}
+\newcommand{\cartaSignatarioCargo}{Coordenador — Projeto Hermathena}
+
+\begin{document}
+
+% --- Cabeçalho -------------------------------------------------------
+\begin{minipage}[t]{0.62\textwidth}
+  \hermaTitle{\cartaRemetente}\\[2pt]
+  \hermaSubtitle{\cartaRemetenteDetalhe}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.33\textwidth}
+  \raggedleft\hermathenaLogo[2.6cm]
+\end{minipage}
+
+\vspace{4pt}
+\hermaRule
+\vspace{18pt}
+
+% --- Destinatário ----------------------------------------------------
+\cartaDestinatario\\
+\cartaDestinatarioDetalhe
+
+\vspace{14pt}
+\textbf{Assunto:} \cartaAssunto
+
+\vspace{14pt}
+Prezados(as) Senhores(as),
+
+\vspace{6pt}
+O Projeto Hermathena conduz a estratégia de comunicação, educação científica e
+engajamento público associada ao Radiotelescópio BINGO, instalado em Aguiar, na
+Paraíba. Suas ações articulam pesquisa de fronteira, formação de recursos humanos
+e desenvolvimento regional, em diálogo permanente com a sociedade.
+
+\vspace{6pt}
+[Corpo da carta. Prefira a voz ativa, o presente do indicativo e um assunto por
+parágrafo. Defina siglas na primeira ocorrência e referencie as fontes sempre que
+houver afirmação factual.]
+
+\vspace{6pt}
+Colocamo-nos à disposição para detalhar esta proposta e para construir, em
+conjunto, um desenho institucional de cooperação.
+
+\vspace{24pt}
+Respeitosamente,
+
+\vspace{28pt}
+\rule{7cm}{0.4pt}\\
+\textbf{\cartaSignatario}\\
+\cartaSignatarioCargo
+
+\vspace{20pt}
+\hermaRule
+\vspace{4pt}
+{\footnotesize\color{hermaGrafite} Documento institucional do Projeto Hermathena ·
+Radiotelescópio BINGO · \cartaLocalData}
+
+\end{document}

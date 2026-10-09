@@ -1,0 +1,67 @@
+% =====================================================================
+%  Comunicado oficial — Projeto Hermathena / BINGO
+%  Compilar com LuaLaTeX ou XeLaTeX (Overleaf: Menu > Compiler).
+%  Mantenha hermathena.sty no mesmo diretório.
+% =====================================================================
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=2.8cm,right=2.8cm,top=3cm,bottom=3cm]{geometry}
+\usepackage{hermathena}
+\usepackage{setspace}
+\usepackage{parskip}
+
+\onehalfspacing
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% ---------------------------------------------------------------------
+%  Dados do comunicado — edite aqui
+% ---------------------------------------------------------------------
+\newcommand{\comNumero}{001/2026}
+\newcommand{\comLocalData}{Campina Grande, 9 de outubro de 2026}
+\newcommand{\comTitulo}{Instituição do calendário editorial do Projeto Hermathena}
+\newcommand{\comSignatario}{Luciano Barosi}
+\newcommand{\comSignatarioCargo}{Coordenador — Projeto Hermathena}
+
+\begin{document}
+
+% --- Faixa de marca --------------------------------------------------
+\begin{center}
+  \hermathenaLogo[2.4cm]\par\vspace{6pt}
+  {\hermaDisplay\color{hermaGrafite}\small Projeto Hermathena — Comunicação Multimídia do Radiotelescópio BINGO}\par\vspace{2pt}
+  \hermaRule
+\end{center}
+
+\vspace{10pt}
+\begin{center}
+  {\hermaDisplay\color{hermaAzulProfundo}\Large\bfseries COMUNICADO OFICIAL Nº \comNumero}\\[4pt]
+  {\hermaDisplay\color{hermaAzulBingo}\large \comTitulo}
+\end{center}
+
+\vspace{16pt}
+\comLocalData
+
+\vspace{14pt}
+[Corpo do comunicado. Redija em tom sóbrio e formal, com voz ativa e uma ideia por
+período. Explicite prazos, responsáveis e referências normativas quando
+aplicável.]
+
+\vspace{6pt}
+[Complemento, se necessário.]
+
+\vspace{26pt}
+\begin{flushright}
+  \rule{7cm}{0.4pt}\\
+  \textbf{\comSignatario}\\
+  \comSignatarioCargo
+\end{flushright}
+
+\vspace{18pt}
+\hermaRule
+\vspace{4pt}
+{\footnotesize\color{hermaGrafite} Documento oficial do Projeto Hermathena ·
+Radiotelescópio BINGO · Distribuição institucional}
+
+\end{document}

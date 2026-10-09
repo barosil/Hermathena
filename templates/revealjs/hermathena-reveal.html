@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+     Apresentação (Reveal.js) — Projeto Hermathena / BINGO
+     Identidade BR01: paleta, tipografia Outfit/Inter e filete de marca.
+     Abra este arquivo no navegador; requer conexão para os CDNs.
+     ===================================================================== -->
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto Hermathena — Apresentação</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css" />
+
+  <style>
+    :root {
+      --grafite:        #2B3147;
+      --azul-profundo:  #08268F;
+      --azul-bingo:     #3F6CCF;
+      --cyan:           #22D3EE;
+      --roxo:           #5A3FB2;
+      --terracota:      #C75A2E;
+      --laranja:        #F28A34;
+      --branco:         #F7F1E8;
+      --ouro:           #C9A34A;
+    }
+
+    .reveal { font-family: 'Inter', sans-serif; color: var(--grafite); }
+    .reveal h1, .reveal h2, .reveal h3, .reveal .title {
+      font-family: 'Outfit', sans-serif;
+      color: var(--grafite);
+      text-transform: none;
+      letter-spacing: 0.01em;
+    }
+    .reveal h2 { color: var(--azul-profundo); }
+    .reveal a { color: var(--azul-bingo); }
+    .reveal .accent { color: var(--laranja); }
+
+    .reveal section.title-slide { text-align: left; }
+    .reveal .brand-rule {
+      height: 3px; width: 6em; background: var(--laranja);
+      border: 0; margin: 0.6em 0 1em;
+    }
+    .reveal .subtitle { color: var(--azul-bingo); font-size: 0.7em; }
+    .reveal .kicker {
+      font-family: 'Outfit', sans-serif; font-size: 0.45em;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--terracota);
+    }
+    .reveal footer { font-size: 0.4em; color: var(--grafite); }
+    .reveal .slide-number { color: var(--grafite); background: transparent; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Capa -->
+      <section class="title-slide"
+               data-background-color="#FFFFFF">
+        <p class="kicker">Radiotelescópio BINGO · Aguiar — PB</p>
+        <h1>Projeto Hermathena</h1>
+        <hr class="brand-rule" />
+        <p class="subtitle">Comunicação Multimídia do Radiotelescópio BINGO</p>
+        <p><small>Luciano Barosi · 9 de outubro de 2026</small></p>
+      </section>
+
+      <!-- Fundamentos -->
+      <section>
+        <h2>Uma jornada de transformação humana nas asas da ciência</h2>
+        <hr class="brand-rule" />
+        <ul>
+          <li>Aproximar ciência e sociedade.</li>
+          <li>Transformar conhecimento em oportunidade.</li>
+          <li>Interiorizar a ciência no sertão paraibano.</li>
+        </ul>
+      </section>
+
+      <!-- Núcleos -->
+      <section>
+        <h2>Núcleos do projeto</h2>
+        <hr class="brand-rule" />
+        <div style="display:flex; gap:2em;">
+          <div style="flex:1">
+            <p><strong>Magellan</strong><br /><small>Infraestrutura digital</small></p>
+            <p><strong>Triangulum</strong><br /><small>Produção de conteúdo</small></p>
+          </div>
+          <div style="flex:1">
+            <p><strong>Via Láctea</strong><br /><small>Educação</small></p>
+            <p><strong>Andromeda</strong><br /><small>Engajamento</small></p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <footer style="position:fixed; bottom:10px; left:16px; font-size:11px; color:#2B3147;">
+    Projeto Hermathena · BINGO
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      transition: 'fade',
+      width: 1280,
+      height: 720,
+      margin: 0.06
+    });
+  </script>
+</body>
+</html>
